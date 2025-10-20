@@ -1,0 +1,37 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00d5ff"/>
+      <stop offset="1" stop-color="#007bff"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.7" cy="0.2" r="0.8">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- arka plan -->
+  <rect width="1200" height="630" rx="28" fill="url(#bg)"/>
+  <rect width="1200" height="630" rx="28" fill="url(#glow)"/>
+
+  <!-- soft daireler -->
+  <g opacity="0.12" fill="#fff">
+    <circle cx="160" cy="140" r="90"/>
+    <circle cx="1050" cy="520" r="120"/>
+    <circle cx="920" cy="120" r="60"/>
+    <circle cx="320" cy="520" r="70"/>
+  </g>
+
+  <!-- megafon (duyuru) -->
+  <g transform="translate(0,10)">
+    <!-- koni -->
+    <polygon points="380,315 750,220 750,410 380,330" fill="#ffffff" opacity="0.95"/>
+    <!-- uç halka -->
+    <circle cx="770" cy="315" r="26" fill="none" stroke="#ffffff" stroke-width="12" opacity="0.95"/>
+    <!-- sap -->
+    <rect x="430" y="350" width="90" height="140" rx="14" fill="#ffffff" opacity="0.95"/>
+  </g>
+
+  <!-- alt glow çubuğu -->
+  <rect x="60" y="540" width="1080" height="18" rx="9" fill="#ffffff" opacity="0.25"/>
+</svg>

@@ -1,0 +1,1 @@
+//Arayüzle ilgili JS
