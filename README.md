@@ -1,20 +1,30 @@
-# TeknOcak-Rebuild-Project
+# TeknOcak-Frontend-Rebuild-Project
 
-    --Goals--
+                                    --Goals--
 1- Rebuild ugly font-end design for more accesebilty and optimizations.
-2- Adding the information and id's of users from the previous site.
-3- Make a admin dashboard for easly update and add events.
 
-    --Frontend--
-1- Make a language changer button will work.
-2- Add light and dark modes.
+2- Create scroll and welcome animations.
 
-    --Backend--
-1- Build backend server for user login and register.
-2- Users can change profile features.(pictures,descriptions etc...)
-    
-    --Techstack--
-    .HTML
-    .CSS
-    .Javascript
-    .Node.js(Backend)
+3- Create a loading animation site.
+
+                                    --Frontend--
+1- Add light and dark modes.
+
+    Techstack:
+    -HTML
+    -CSS
+    -Javascript
+-
+        Some old front-end design images:
+![](old-site-images/main.png)
+![](old-site-images/news.png)
+![](old-site-images/carosuel.png)
+![](old-site-images/carosuel2.png)
+![](<old-site-images/faq and footer.png>)
+![](old-site-images/contact.png)
+![](<old-site-images/faq and footer.png>)
+![](old-site-images/login.png)
+![](old-site-images/register.png)
+![](old-site-images/section.png)
+![](old-site-images/signin-main.png)
+![](old-site-images/race.png)
