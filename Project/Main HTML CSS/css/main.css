@@ -10,17 +10,18 @@
     }
 
     :root {
-        --Purple600: hsl(246, 80%, 60%);
-        --Navy950: hsl(226, 43%, 10%);
+        --Purple600: rgb(88, 71, 235);
+        --Navy950: rgb(15, 20, 36);
         --Navy900: rgb(28, 31, 74);
-        --Purple500: hsl(235, 45%, 61%);
+        --Purple500: rgb(111, 118, 200);
         --Navy200: rgb(189, 193, 255);
     }
 
     body {
         min-height: 100vh;
-        background: var(--Navy950);
-        background-size: cover;
+        background: url(/Project/assets/images/main/star.png) repeat, linear-gradient(180deg, rgba(19, 31, 69, 1) 28%, rgba(42, 36, 145, 1) 51%, rgba(139, 123, 255, 1) 100%);
+        background-size: auto-fit, cover;
+        background-attachment: fixed;
         color: whitesmoke;
         font-family: "Rubik", sans-serif;
     }
@@ -56,6 +57,7 @@
         color: white;
         text-decoration: none;
         cursor: pointer;
+        -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s both;
     }
 
     .navbar-container .navbar-menu {
@@ -74,10 +76,11 @@
         border: 2px solid transparent;
         transition: all 0.7s ease;
         white-space: nowrap;
+        -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s both;
     }
 
     .navbar-menu li a i {
-        padding-right: 1.5em;
+        padding-right: .8em;
         color: var(--Purple500);
     }
 
@@ -101,6 +104,7 @@
         padding: 10px;
         border: none;
         cursor: pointer;
+        -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s both;
     }
 
     .bar {
@@ -133,7 +137,8 @@
         min-width: 200px;
         z-index: 1000;
         margin-top: 10px;
-    }
+        -webkit-animation: scale-up-hor-center 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        }
 
     #dropdown .dropdown-toggle {
         background: transparent;
@@ -141,6 +146,8 @@
         color: white;
         font-weight: 600;
         font-size: 1rem;
+        cursor: pointer;
+        -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s both;
     }
 
     #dropdown .dropdown-toggle i {
@@ -196,13 +203,15 @@
             box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(20px);
         }
+
         .navbar-container .navbar-menu.active {
             display: flex;
         }
 
-        .navbar-container .navbar-logo{
+        .navbar-container .navbar-logo {
             font-size: 1.8rem;
         }
+
         .navbar-toggle {
             display: block;
             z-index: 999;
@@ -239,10 +248,188 @@
         #dropdown .dropdown-toggle i {
             padding-right: 24px;
         }
+
+        .main .main-container .hero {
+            flex-direction: column;
+            gap: 1em !important;
+            height: 500px !important;
+        }
+
+        .hero p {
+            width: 450px;
+            font-size: 1rem !important;
+        }
     }
 
     @media (max-width: 480px) {
         .navbar-container .navbar-logo {
             z-index: 1000;
         }
+
+        .main .main-container .hero {
+            height: 360px !important;
+        }
+
+        .hero p {
+            font-size: .7rem !important;
+            width: fit-content !important;
+            padding: 20px 20px !important;
+            margin: 0 20px !important;
+        }
+
+        .hero a {
+            font-size: .8rem;
+        }
+
+        .hero h1 {
+            font-size: 1.5rem;
+        }
     }
+
+    /*Main Section*/
+
+
+    /*City İmage*/
+    .main .city-img {
+        width: 105%;
+        object-fit: cover;
+        margin: -10px -10px;
+    }
+
+    .content {
+        height: 800px;
+        background: rgb(26, 26, 26);
+    }
+
+    /*Main Text - Hero*/
+
+    .main .main-container .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: start;
+        flex-direction: column;
+        height: 600px;
+        margin-top: 20px;
+        gap: .5em;
+        overflow: hidden;
+    }
+
+    .hero p {
+        max-width: 700px;
+        padding: 20px 50px;
+        color: whitesmoke;
+        border-left: 2px solid;
+        border-right: 2px solid;
+        font-size: 1.5rem;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+        -webkit-animation: scale-up-hor-center 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+
+    .hero h1 {
+        text-align: center;
+        -webkit-animation: scale-up-hor-center 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+
+
+    .hero a {
+        text-decoration: none;
+        color: var(--Navy200);
+        text-align: center;
+        border: 2px solid var(--Navy200);
+        border-radius: 20px;
+        padding: 10px 10px;
+        width: auto;
+        backdrop-filter: blur(20px)
+    }
+
+    .hero a:hover {
+        background-color: var(--Purple600);
+        color: var(--Navy900);
+        transition: .2s ease-in-out;
+        box-shadow: 0 0 60px rgb(88, 71, 235, 1);
+    }
+
+    .hero a i {
+        margin: 0 10px;
+    }
+
+    /*Content*/
+    .content{
+        width: 100%;
+        display: inline-block;
+        place-items: center;
+        margin-bottom: 2em !important;
+    }
+    /*Carousel*/
+    .carousel{
+        width: 60%;
+        border: 5px solid var(--Navy200);
+        padding: 1em 1em;
+        border-radius: 20px;
+        backdrop-filter: blur(20px);
+        display: flex;
+        overflow-x: auto;
+    }
+    .carousel::-webkit-scrollbar{
+        display: none;
+    }
+    .group{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        animation: spin 10s infinite linear;
+        padding-right: 1em;
+    }
+    .card{
+        flex: 0 0 5em;
+        height: 5em;
+        padding: 1em;
+        background: var(--Purple600);
+        font-size: 3em;
+        border-radius: .2em;
+        text-align: center;
+        align-content: center;
+    }
+
+    /*animations*/
+    /**
+ * ----------------------------------------
+ * animation tracking-in-expand
+ * ----------------------------------------
+ */
+    @-webkit-keyframes tracking-in-expand {
+        0% {
+            letter-spacing: -0.5em;
+            opacity: 0;
+        }
+        40% {
+            opacity: 0.6;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+/**
+ * ----------------------------------------
+ * animation scale-up-hor-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes scale-up-hor-center {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+
+@keyframes spin {
+    from {translate: 0;}
+    to {translate: -100%;}
+}
