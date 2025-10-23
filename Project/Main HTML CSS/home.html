@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/home.css">
     <script src="/Project/js/ui.js" defer></script>
     <script src="/Project/js/api.js" defer></script>
+    <!-- Swiper Cdns -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -45,8 +47,11 @@
     </nav>
     <section class="main">
         <div class="main-container">
-            <div class="hero">
-                <h1>BİLİM <br>ŞENLİĞİ</h1>
+            <div class="tekno-img">
+                <img src="/Project/assets/images/icons/teknocak3.png" alt="" class="teknocak">
+            </div>
+            <div class="text">
+                <h1>Bilim Şenliği</h1>
                 <p>Ülkü Ocakları Eğitim ve Kültür Vakfı olarak hayata geçirdiğimiz TeknOcak Projesi, 100 takımın
                     katılımıyla gerçekleşecek büyük bir teknoloji festivalidir. <br> <br>
                     Gençlerimiz bu proje sayesinde teknoloji, inovasyon ve girişimcilik alanlarında kendilerini
@@ -54,35 +59,175 @@
                     edeceklerdir. <br> <br>
                     TeknOcak Projesi, Türk gençliğinin üretkenliğini ve yenilikçi ruhunu ortaya koyacağı güçlü bir adım
                     olacaktır.</p>
-                <a href="#"><i class="fa-solid fa-star"></i>TAKIMINI KUR VE KATIL!<i class="fa-solid fa-star"></i></a>
-            </div>
-            <div class="city">
-                <img src="/Project/assets/images/main/City_Buildings_Silhouette_PNG_Clip_Art.png" alt="img"
-                    class="city-img">
-            </div>
-            <div class="content">
-                <h2>Hayalini Kur, Takımını Kur, Yarışmaya Katıl!</h2>
-                <div class="carousel">
-                    <div class="group">
-                        <div class="card">1</div>
-                        <div class="card">2</div>
-                        <div class="card">3</div>
-                        <div class="card">4</div>
-                        <div class="card">5</div>
-                        <div class="card">6</div>
-                    </div>
-                    <div class="group" aria-hidden="true">
-                        <div class="card">1</div>
-                        <div class="card">2</div>
-                        <div class="card">3</div>
-                        <div class="card">4</div>
-                        <div class="card">5</div>
-                        <div class="card">6</div>
-                    </div>
-                </div>
+                <a href="#">TAKIMINI KUR VE KATIL!</a>
             </div>
         </div>
     </section>
+    <section class="carousel">
+        <div class="content">
+            <h2>Hayalini Kur, Takımını Kur, Yarışmaya Katıl!</h2>
+            <div class="wrapper swiper">
+                <div class="card-list swiper-wrapper">
+                    <a href="#" class="card swiper-slide">
+                        <div class="card-image">
+                            <img src="/Project/assets/images/yarışmalar/afet.png" alt="img">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">2026 AFET TEKNOLOJİLERİ YARIŞMASI</h3>
+                        </div>
+                    </a>
+                    <a href="#" class="card swiper-slide">
+                        <div class="card-image">
+                            <img src="/Project/assets/images/yarışmalar/deniz.png" alt="img">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">DENİZ LOJİSTİĞİ VE GÜVENLİĞİ PROJE YARIŞMASI</h3>
+                        </div>
+                    </a>
+                    <a href="#" class="card swiper-slide">
+                        <div class="card-image">
+                            <img src="/Project/assets/images/yarışmalar/deprem.png" alt="img">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">DEPREME DAYANIKLI YAPILAR YARIŞMASI</h3>
+                        </div>
+                    </a>
+                    <a href="#" class="card swiper-slide">
+                        <div class="card-image">
+                            <img src="/Project/assets/images/yarışmalar/giyilebilir.png" alt="img">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">GİYİLEBİLİR TEKNOLOJİ KATEGORİSİ YARIŞMASI</h3>
+                        </div>
+                    </a>
+                    <a href="#" class="card swiper-slide">
+                        <div class="card-image">
+                            <img src="/Project/assets/images/yarışmalar/tank.png" alt="img">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">TÜRKİYE DEMİR AYAKLAR LİSELER ARASI TANK YARIŞLARI</h3>
+                        </div>
+                    </a>
+                </div>
+                <!--navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+    <section class="carousel">
+        <div class="content">
+            <h2>TeknOcak Takımları</h2>
+            <div class="wrapper swiper">
+                <div class="card-list swiper-wrapper">
+                    <a href="#" class="card swiper-slide">
+                        <div class="card-image">
+                            <img src="/Project/assets/images/kulüpler/altay.JPG" alt="img">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">ALTAY TEKNOLOJİ KULÜBÜ<br>SAKARYA</h3>
+                        </div>
+                    </a>
+                    <a href="#" class="card swiper-slide">
+                        <div class="card-image">
+                            <img src="/Project/assets/images/kulüpler/kaan.jpg" alt="img">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">KAAN TEKNOLOJİ KULÜBÜ <br> ADANA</h3>
+                        </div>
+                    </a>
+                    <a href="#" class="card swiper-slide">
+                        <div class="card-image">
+                            <img src="/Project/assets/images/kulüpler/kocaeli.png" alt="img">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">ŞEHİT FIRAT YILMAZ ÇAKIROĞLU TEKNOLOJİ KLÜBÜ<br>KOCAELİ</h3>
+                        </div>
+                    </a>
+                    <a href="#" class="card swiper-slide">
+                        <div class="card-image">
+                            <img src="/Project/assets/images/kulüpler/konya.png" alt="img">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">ANKE 1076 TEKNOLOJİ KLÜBÜ <br>KONYA</h3>
+                        </div>
+                    </a>
+                    <a href="#" class="card swiper-slide">
+                        <div class="card-image">
+                            <img src="/Project/assets/images/kulüpler/sinoft.jpg" alt="img">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">ORHUN TEKNOLOJİ KLÜBÜ <br> KARS</h3>
+                        </div>
+                    </a>
+                    <a href="#" class="card swiper-slide">
+                        <div class="card-image">
+                            <img src="/Project/assets/images/kulüpler/yozgat.jpg" alt="img">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">GÖKBÖRÜ TEKNOLOJİ KLÜBÜ<br>YOZGAT</h3>
+                        </div>
+                    </a>
+                </div>
+                <!--navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+    <section class="details">
+        <div class="heading">
+            <h3>Teknoloji ve Festival</h3>
+            <h4>Çoklu Alanda Proje Geliştirme Fırsatı!</h4>
+        </div>
+        <div class="wrap">
+            <div class="video">
+            </div>
+            <div class="faq">
+                <details>
+                    <summary>Festival Deneyimi</summary>
+                    <p>100 takımın katılımıyla gerçekleşecek büyük teknoloji festivalinde gençlerimiz inovasyon ve
+                        girişimcilik ruhlarını sergileyecek, üretkenliklerini ortaya koyacaklardır.</p>
+                </details>
+                <details>
+                    <summary>Teknoloji ve İnovasyon Atölyeleri</summary>
+                    <p>Gençlerimiz proje kapsamında teknoloji ve yenilikçi fikirler üzerine çalışarak kendilerini
+                        geliştirme fırsatı bulacaklardır.</p>
+                </details>
+                <details>
+                    <summary>Girişimcilik Fırsatları</summary>
+                    <p>Proje, gençlere girişimcilik alanında yol gösterecek, onların fikirlerini hayata geçirmeleri için
+                        güçlü bir zemin sunacaktır.</p>
+                </details>
+                <details>
+                    <summary>Eğitim ve Sosyal Kazanımlar</summary>
+                    <p>Festival sadece teknolojiyle sınırlı kalmayıp gençlerimizin sosyal ve kültürel anlamda da önemli
+                        kazanımlar elde etmelerine katkı sağlayacaktır.</p>
+                </details>
+                <details>
+                    <summary>Geleceğe Güçlü Adım</summary>
+                    <p>TeknOcak Projesi, Türk gençliğinin üretkenliğini ve yenilikçi ruhunu ortaya koyacağı güçlü bir
+                        adım olacaktır.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+    <section class="hero">
+        <div class="faq">
+            <h2>Sıkça Sorulan Sorular</h2>
+            <details>
+                <summary>TeknOcak Nedir?</summary>
+                <p>TeknOcak, Ülkü Ocakları Eğitim ve Kültür Vakfı tarafından hayata geçirilen, 100 takımın katılımıyla
+                    gerçekleşecek büyük bir teknoloji festivalidir.</p>
+            </details>
+            <details>
+                <summary>TeknOcak kişisel gelişime katkı sağlıyor mu ?</summary>
+                <p>TeknOcak, Türk gençliğinin üretkenliğini destekleyen ve yenilikçi fikirlerini hayata geçirmelerine
+                    zemin hazırlayan güçlü bir adımdır.</p>
+            </details>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 </body>
 
 </html>
