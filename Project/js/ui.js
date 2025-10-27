@@ -49,3 +49,22 @@ const swiper = new Swiper('.swiper', {
       },
     },
   });
+
+
+  //Şifre Görüntüleme Düzenlenecek
+
+  const passwordİcon = document.getElementById('Shower');
+  const passwordİnput = document.getElementById('password');
+
+
+  passwordİcon.addEventListener('click'),function btn() {
+    let type = passwordİnput.getAttribute('type');
+    let icon = passwordİcon.getAttribute('class');
+    if (type === 'password'){
+      passwordİnput.setAttribute('type','text');
+      icon.setAttribute('class','fa-solid da-eye');
+    }else{
+      passwordİnput.setAttribute('type','password');
+      icon.setAttribute('class','fa-solid da-eye-slash');
+    }
+  }
