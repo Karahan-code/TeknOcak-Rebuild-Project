@@ -36,11 +36,11 @@
     width: 35%;
     padding: 20px 50px;
     color: whitesmoke;
-    border: 4px solid var(--Blue600);
-    border-radius: 50px;
+    border: 8px solid rgba(0, 255, 255, .2);
+    border-radius: 20px;
     font-size: 1.2rem;
     text-align: center;
-    background: var(--Navy900);
+    background: var(--Blue600);
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
     -webkit-animation: scale-up-hor-center 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation: scale-up-hor-center 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -64,8 +64,8 @@
     text-decoration: none;
     color: var(--Navy200);
     text-align: center;
-    border: 2px solid var(--Navy200);
-    background-color: var(--Purple600);
+    border: 4px solid rgba(0, 255, 255, .2);
+    background-color: transparent;
     border-radius: 20px;
     padding: 10px 10px;
     width: auto;
@@ -74,14 +74,9 @@
 
 .text a:hover,
 .card-content .card-button:hover {
-    transition: .2s ease-in-out;
-    box-shadow: 0 0 60px rgb(88, 71, 235, 1);
+    transition: .4s ease;
+    box-shadow: 0 0 50px rgb(100, 255, 235, .2);
 }
-
-.hero a:hover i {
-    animation: rotate 2s ease infinite;
-}
-
 /*Carousel*/
 
 .carousel {
@@ -110,7 +105,6 @@
     background: var(--Blue600);
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.4s ease, opacity 0.4s ease;
     text-decoration: none;
 }

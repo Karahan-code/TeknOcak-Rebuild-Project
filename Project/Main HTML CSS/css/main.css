@@ -81,19 +81,21 @@
         font-weight: 500;
         padding: 10px 20px;
         border-radius: 20px;
-        border: 2px solid transparent;
         transition: all 0.7s ease;
         white-space: nowrap;
         -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s both;
+        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s both;
+        
     }
 
     .navbar-menu li a i {
-        padding-right: .8em;
+        padding-right: .7em;
         color: #fff;
     }
 
     .navbar-container .navbar-menu li a:hover {
-        transition: .5s ease-in-out;
+        border-bottom: 1px solid;
+        transition: .6s ease-in-out;
         scale: 1.02;
         border-radius: 0;
     }
@@ -226,6 +228,7 @@
     }
 
     .contact-text h5 a {
+        color: aqua;
         text-decoration: none;
     }
 
@@ -325,15 +328,5 @@
         100% {
             -webkit-transform: scaleX(1);
             transform: scaleX(1);
-        }
-    }
-
-    @keyframes rotate {
-        from {
-            transform: rotateZ(0deg);
-        }
-
-        to {
-            transform: rotateZ(360deg);
         }
     }

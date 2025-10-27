@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destek</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/login.css">
     <script src="/Project/js/ui.js" defer></script>
     <script src="/Project/js/api.js" defer></script>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="navbar-container">
@@ -40,21 +43,46 @@
             </ul>
         </div>
     </nav>
-    <section class="help">
-
+    <section class="login">
+        <div class="wrap">
+        <form action="">
+            <h1>Giriş Yap</h1>
+            <div class="input-box">
+                <input type="text" required>
+                <span>e-posta</span>
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" required>
+                <span>şifre</span>
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <div class="container">
+                <a href="#">Şifreni mi unuttun?</a>
+            </div>
+            <button type="submit" class="btn">Giriş</button>
+            <div class="register">
+                <p>Hesabın yok mu? <a href="register.html">Kayıt ol.
+                    </a></p>
+            </div>
+        </form>
+    </div>
     </section>
     <footer>
         <div class="contact">
             <div class="contact-btns">
                 <a href="https://x.com/ulku_ocaklari"><i class="fa-brands fa-x-twitter"></i></a>
                 <a href="https://www.instagram.com/ulkuocaklariekv/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/company/%C3%BClk%C3%BC-ocaklar%C4%B1-e%C4%9Fitim-ve-k%C3%BClt%C3%BCr-vakf%C4%B1/"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a
+                    href="https://www.linkedin.com/company/%C3%BClk%C3%BC-ocaklar%C4%B1-e%C4%9Fitim-ve-k%C3%BClt%C3%BCr-vakf%C4%B1/"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://www.facebook.com/UlkuOcaklariEKV/"><i class="fa-brands fa-facebook-f"></i></a>
             </div>
             <div class="contact-text">
-            <h5>© 2025 - TeknocakPlatform - <a href="/Project/Main HTML CSS/contact.html">Destek</a></h5>
+                <h5>© 2025 - TeknocakPlatform - <a href="/Project/Main HTML CSS/contact.html">Destek</a></h5>
             </div>
         </div>
     </footer>
 </body>
+
 </html>

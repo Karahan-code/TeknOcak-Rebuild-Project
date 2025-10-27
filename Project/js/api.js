@@ -1,14 +1,22 @@
 //Backend API çağrıları burada olacak
 
 // Deneme amaçlı: giriş yapıldığında değişiyor
-let isLoggedIn = true; 
+let isLoggedIn = false; 
 
 function updateNavbar() {
-  if (isLoggedIn) {
+  if (isLoggedIn === true) {
     document.body.classList.add("logged-in");
   } else {
     document.body.classList.remove("logged-in");
   }
-}
-// İlk yüklemede kontrol et
+}// İlk yüklemede kontrol et
 updateNavbar();
+
+
+// Navbar Çıkış yapma buttonu
+const logOut = document.getElementById('logOut');
+
+logOut.addEventListener("click",function(){
+  document.body.classList.remove("logged-in");
+  isLoggedIn = false;
+})
