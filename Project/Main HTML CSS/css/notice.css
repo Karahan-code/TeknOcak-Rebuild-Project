@@ -1,1 +1,95 @@
 /*Notice HTML's CSS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --Blue600: rgb(30, 80, 180);
+    --Navy950: rgb(10, 25, 60);
+    --Navy900: rgb(28, 50, 120);
+    --Blue500: rgb(100, 149, 237);
+    --Navy200: rgb(173, 216, 230);
+}
+
+
+.duyurular{
+    min-height: 80vh;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    flex: 1;
+}
+
+.heading h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1em 0;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.card{
+    display: flex;
+    height: auto;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: 1em .5em;
+    background-color: var(--Blue600);
+    border-radius: 15px;
+    border: 8px solid var(--Blue500);
+}
+
+.card img{
+    width: 400px;
+    height: auto;
+    border-radius: 10px !important;
+}
+
+.card .text h3{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: whitesmoke;
+    padding: .5em 0;
+}
+
+.text p{
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1em 1em;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    transition: .2s ease-in-out;
+    box-shadow: 0 0 40px rgb(173, 216, 230, 0.4);
+}
+
+
+@media (max-width:1100px) {
+    .card{
+        flex-direction: column;
+        width:70%;
+    }
+    img{
+        width:80% !important;
+        padding: 1em 0;
+    }
+}
+
+@media (max-width: 582px){
+    .card{
+        width: 95%;
+    }
+}

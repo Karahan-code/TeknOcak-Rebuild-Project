@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destek</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/contact.css">
     <script src="/Project/js/ui.js" defer></script>
     <script src="/Project/js/api.js" defer></script>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="navbar-container">
@@ -23,8 +26,8 @@
                 <li><a href="#"><i class="fa-solid fa-flag-checkered"></i> Yarışmalar</a></li>
                 <li><a href="#"><i class="fa-solid fa-phone"></i> Destek</a></li>
                 <!-- Giriş öncesi -->
-                <li class="auth"><a href="#"><i class="fa-solid fa-right-to-bracket"></i> Giriş Yap</a></li>
-                <li class="auth"><a href="#"><i class="fa-solid fa-user-plus"></i> Kayıt Ol</a></li>
+                <li class="auth"><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Giriş Yap</a></li>
+                <li class="auth"><a href="register.html"><i class="fa-solid fa-user-plus"></i> Kayıt Ol</a></li>
                 <!-- Giriş sonrası (dropdown menü) -->
                 <li class="user-item dropdown" id="dropdown">
                     <button class="dropdown-toggle" id="userbtn"><i class="fa-solid fa-user"></i>Kullanıcı</button>
@@ -41,20 +44,90 @@
         </div>
     </nav>
     <section class="help">
+        <div class="box box1" style="grid-area: box-1;">
+            <h2>Destek Merkezi</h2>
+            <p>Sorularınızı önemsiyoruz. TeknOcak ekibi olarak her adımda yanınızdayız. Hesabınız, başvurularınız veya
+                teknik konularla ilgili desteğe anında ulaşabilirsiniz.</p>
+        </div>
+        <div class="box box2" style="grid-area: box-2;">
+            <h3><i class="fa-solid fa-location-dot"></i>Konum</h3>
+            <p>ÜLKÜ OCAKLARI GENEL MERKEZİ<br>
+                Nasuh Akar, 1401. Sk. No:17 <br>
+                Çankaya / Ankara 06520 <br>
+                Pazartesi–Pazar | 08:00 – 22:00 (yerel saat)
 
+            </p>
+        </div>
+        <div class="box box3" style="grid-area: box-3;">
+            <h3><i class="fa-solid fa-square-share-nodes"></i>Sosyal Medya</h3>
+            <div class="buttons">
+                <a href="https://www.instagram.com/ulkuocaklariekv/"><i class="fa-brands fa-instagram"></i>İnstagram</a>
+                <a href="https://www.linkedin.com/company/%C3%BClk%C3%BC-ocaklar%C4%B1-e%C4%9Fitim-ve-k%C3%BClt%C3%BCr-vakf%C4%B1/"><i class="fa-brands fa-linkedin-in"></i>Linkedin</a>
+                <a href="https://www.facebook.com/UlkuOcaklariEKV/"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
+                <a href="https://x.com/ulku_ocaklari"><i class="fa-brands fa-x-twitter"></i>Twitter - X</a>
+            </div>
+        </div>
+        <div class="box box4" style="grid-area: box-4;">
+            <h3><i class="fa-solid fa-envelope"></i>E-posta</h3>
+            <div class="buttons">
+                <a href="#">destek@teknocak.org.tr</a>
+            </div>
+        </div>
+        <div class="box box5" style="grid-area: box-5;">
+            <h3><i class="fa-solid fa-phone"></i>İletişim</h3>
+            <div class="buttons">
+                <a href="#">+90 212 123 45 67</a>
+            </div>
+        </div>
+        <div class="box box6" style="grid-area: box-6;">
+            <h2>İhtiyacınız Olanı Bize Söyleyin <br>
+                Ekibimiz, büyük küçük her detayda size yardımcı olmaya hazırdır.</h2>
+            <div class="message">
+                <div class="input-box box7" style="grid-area: box-7;">
+                    <input type="text" required>
+                    <span>Ad</span>
+                </div>
+                <div class="input-box box8" style="grid-area: box-8;">
+                    <input type="text" required>
+                    <span>Soyad</span>
+                </div>
+                <div class="input-box box9" style="grid-area: box-9;">
+                    <input type="text" required>
+                    <span>Ülke</span>
+                </div>
+                <div class="input-box box10" style="grid-area: box-10;">
+                    <input type="text" required>
+                    <span>Telefon Numarası</span>
+                </div>
+                <div class="input-box box11" style="grid-area: box-11;">
+                    <input type="text" required>
+                    <span>E-posta Adresi</span>
+                </div>
+                <div class="input-box box12" style="grid-area: box-12;">
+                    <input type="text" required>
+                    <span>Mesaj</span>
+                </div>
+                <div class="input-box box13" style="grid-area: box-13;">
+                    <button>Gönder</button>
+                </div>
+            </div>
+        </div>
     </section>
     <footer>
         <div class="contact">
             <div class="contact-btns">
                 <a href="https://x.com/ulku_ocaklari"><i class="fa-brands fa-x-twitter"></i></a>
                 <a href="https://www.instagram.com/ulkuocaklariekv/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/company/%C3%BClk%C3%BC-ocaklar%C4%B1-e%C4%9Fitim-ve-k%C3%BClt%C3%BCr-vakf%C4%B1/"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a
+                    href="https://www.linkedin.com/company/%C3%BClk%C3%BC-ocaklar%C4%B1-e%C4%9Fitim-ve-k%C3%BClt%C3%BCr-vakf%C4%B1/"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://www.facebook.com/UlkuOcaklariEKV/"><i class="fa-brands fa-facebook-f"></i></a>
             </div>
             <div class="contact-text">
-            <h5>© 2025 - TeknocakPlatform - <a href="contact.html">Destek</a></h5>
+                <h5>© 2025 - TeknocakPlatform - <a href="contact.html">Destek</a></h5>
             </div>
         </div>
     </footer>
 </body>
+
 </html>

@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destek</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/notice.css">
     <script src="/Project/js/ui.js" defer></script>
     <script src="/Project/js/api.js" defer></script>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="navbar-container">
@@ -19,12 +22,12 @@
                 <span class="bar"></span>
             </button>
             <ul class="navbar-menu">
-                <li><a href="#"><i class="fa-solid fa-bell"></i> Duyurular</a></li>
-                <li><a href="#"><i class="fa-solid fa-flag-checkered"></i> Yarışmalar</a></li>
-                <li><a href="#"><i class="fa-solid fa-phone"></i> Destek</a></li>
+                <li><a href="notice.html"><i class="fa-solid fa-bell"></i> Duyurular</a></li>
+                <li><a href="competitions.html"><i class="fa-solid fa-flag-checkered"></i> Yarışmalar</a></li>
+                <li><a href="contact.html"><i class="fa-solid fa-phone"></i> Destek</a></li>
                 <!-- Giriş öncesi -->
-                <li class="auth"><a href="#"><i class="fa-solid fa-right-to-bracket"></i> Giriş Yap</a></li>
-                <li class="auth"><a href="#"><i class="fa-solid fa-user-plus"></i> Kayıt Ol</a></li>
+                <li class="auth"><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Giriş Yap</a></li>
+                <li class="auth"><a href="register.html"><i class="fa-solid fa-user-plus"></i> Kayıt Ol</a></li>
                 <!-- Giriş sonrası (dropdown menü) -->
                 <li class="user-item dropdown" id="dropdown">
                     <button class="dropdown-toggle" id="userbtn"><i class="fa-solid fa-user"></i>Kullanıcı</button>
@@ -40,21 +43,49 @@
             </ul>
         </div>
     </nav>
-    <section class="help">
-
+    <section class="duyurular">
+        <div class="heading">
+            <h2>-Duyurular-</h2>
+        </div>
+        <div class="content">
+            <div class="card">
+                <img src="/Project/assets/images/kulüpler/altay.JPG" alt="">
+                <div class="text">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum omnis ab quod repellendus esse velit, mollitia dolore et, error sapiente assumenda maiores sequi quisquam, numquam explicabo nobis excepturi eius recusandae? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus sint distinctio unde. Sequi reprehenderit totam odit quis pariatur est, amet sunt ratione asperiores, labore consequuntur odio ut, vitae inventore delectus!</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/Project/assets/images/kulüpler/altay.JPG" alt="">
+                <div class="text">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora eum doloribus molestiae libero officiis cupiditate. Amet a dolorem, omnis excepturi molestiae enim labore consequatur, ad aperiam sapiente quod ipsum blanditiis? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis doloribus distinctio quibusdam cumque blanditiis repellendus fugiat nesciunt doloremque corporis nihil accusantium veritatis dolores repudiandae delectus corrupti, perferendis sed quo ipsam?</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/Project/assets/images/kulüpler/altay.JPG" alt="">
+                <div class="text">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, numquam sunt esse facilis corrupti placeat facere ea est nostrum inventore non eius, ratione, saepe dolorum dolores repellat suscipit tempore enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni voluptatibus quasi ratione ut qui labore quam numquam debitis tenetur aliquam! Iusto, illo sapiente! Inventore temporibus natus assumenda nesciunt eveniet cum.</p>
+                </div>
+            </div>
+        </div>
     </section>
     <footer>
         <div class="contact">
             <div class="contact-btns">
                 <a href="https://x.com/ulku_ocaklari"><i class="fa-brands fa-x-twitter"></i></a>
                 <a href="https://www.instagram.com/ulkuocaklariekv/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/company/%C3%BClk%C3%BC-ocaklar%C4%B1-e%C4%9Fitim-ve-k%C3%BClt%C3%BCr-vakf%C4%B1/"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a
+                    href="https://www.linkedin.com/company/%C3%BClk%C3%BC-ocaklar%C4%B1-e%C4%9Fitim-ve-k%C3%BClt%C3%BCr-vakf%C4%B1/"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://www.facebook.com/UlkuOcaklariEKV/"><i class="fa-brands fa-facebook-f"></i></a>
             </div>
             <div class="contact-text">
-            <h5>© 2025 - TeknocakPlatform - <a href="#">Destek</a></h5>
+                <h5>© 2025 - TeknocakPlatform - <a href="#">Destek</a></h5>
             </div>
         </div>
     </footer>
 </body>
+
 </html>

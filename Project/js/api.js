@@ -1,7 +1,7 @@
 //Backend API çağrıları burada olacak
 
 // Deneme amaçlı: giriş yapıldığında değişiyor
-let isLoggedIn = false; 
+let isLoggedIn = true; 
 
 function updateNavbar() {
   if (isLoggedIn === true) {

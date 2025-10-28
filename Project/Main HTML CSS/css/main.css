@@ -25,7 +25,6 @@
     body {
         min-height: 100vh;
         background: url(/Project/assets/images/main/bg.png),
-            url(/Project/assets/images/main/star.png) repeat,
            linear-gradient(180deg,rgba(10, 25, 60, 1) 0%, rgba(9, 9, 121, 1) 10%, rgba(0, 212, 255, 1) 100%);
         background-size: auto-fit, cover;
         background-attachment: fixed;
