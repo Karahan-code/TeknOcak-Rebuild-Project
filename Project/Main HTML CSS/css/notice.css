@@ -45,14 +45,16 @@
     justify-content: center;
     align-items: center;
     margin: 1em .5em;
-    background-color: var(--Blue600);
+    background-color: transparent;
+    backdrop-filter: blur(50px);
     border-radius: 15px;
-    border: 8px solid var(--Blue500);
+    border: 8px solid rgba(0, 255, 255, .2);
 }
 
 .card img{
     width: 400px;
     height: auto;
+    max-height: 400px;
     border-radius: 10px !important;
 }
 

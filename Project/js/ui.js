@@ -68,3 +68,4 @@ const swiper = new Swiper('.swiper', {
       icon.setAttribute('class','fa-solid da-eye-slash');
     }
   }
+

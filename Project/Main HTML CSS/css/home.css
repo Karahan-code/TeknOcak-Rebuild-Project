@@ -25,7 +25,7 @@
     display: block;
     height: 340px;
     width: 340px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.8);
     border: 5px solid var(--Blue600);
     border-radius: 50%;
     z-index: -1;
@@ -36,11 +36,12 @@
     width: 35%;
     padding: 20px 50px;
     color: whitesmoke;
-    border: 8px solid rgba(0, 255, 255, .2);
+    border: 10px solid rgba(0, 255, 255, .2);
     border-radius: 20px;
     font-size: 1.2rem;
     text-align: center;
-    background: var(--Blue600);
+    background: transparent;
+    backdrop-filter: blur(30px);
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
     -webkit-animation: scale-up-hor-center 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation: scale-up-hor-center 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -77,6 +78,7 @@
     transition: .4s ease;
     box-shadow: 0 0 50px rgb(100, 255, 235, .2);
 }
+
 /*Carousel*/
 
 .carousel {
@@ -102,7 +104,7 @@
 
 .swiper-slide {
     height: 80%;
-    background: var(--Blue600);
+    background: var(--Navy950);
     border-radius: 15px;
     overflow: hidden;
     transition: transform 0.4s ease, opacity 0.4s ease;
@@ -200,9 +202,7 @@
 details {
     background-color: var(--Navy900);
     border: 1px solid;
-    border-radius: 10px;
     padding: 0.5rem 1rem;
-    margin: 0.5em 0;
     font-size: 1.2rem;
 }
 
@@ -211,13 +211,15 @@ summary {
     margin-inline-start: 1rem;
     list-style-position: outside;
     color: var(--Purple600);
+    cursor: pointer;
 }
 
 summary::marker {
     color: var(--Navy200);
 }
 
-details p {
+
+.details p {
     margin: 0.5em 0;
 }
 
@@ -282,13 +284,14 @@ details p {
         width: 100%;
         font-size: .7rem;
     }
-    .main-container .tekno-img img{
+
+    .main-container .tekno-img img {
         margin-right: 0em !important;
         width: 200px;
         height: auto;
     }
 
-    .tekno-img::before{
+    .tekno-img::before {
         width: 190px;
         height: 190px;
     }

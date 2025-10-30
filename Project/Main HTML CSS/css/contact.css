@@ -33,9 +33,9 @@
 }
 
 .box {
-    background-color: var(--Blue600);
+    background-color: var(--Navy950);
     border-radius: 15px;
-    border: 8px solid var(--Blue500);
+    border: 8px solid rgba(0, 255, 255, .2);
     padding: 1em 0;
 }
 
@@ -145,7 +145,7 @@
 input:focus~span,
 input:valid~span {
     transform: translateX(8px) translateY(-23px);
-    background: var(--Blue600);
+    background: var(--Navy950);
     border-left: 2px solid rgba(100, 255, 255, .6);
     border-right: 2px solid rgba(100, 255, 255, .6);
     padding: 0 5px;
