@@ -1,19 +1,4 @@
 /*Notice HTML's CSS*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
-:root {
-    --Blue600: rgb(30, 80, 180);
-    --Navy950: rgb(10, 25, 60);
-    --Navy900: rgb(28, 50, 120);
-    --Blue500: rgb(100, 149, 237);
-    --Navy200: rgb(173, 216, 230);
-}
-
 
 .duyurular{
     min-height: 80vh;
@@ -41,14 +26,14 @@
 .card{
     display: flex;
     height: auto;
-    width: 80%;
+    width: 60%;
     justify-content: center;
     align-items: center;
     margin: 1em .5em;
-    background-color: transparent;
-    backdrop-filter: blur(50px);
-    border-radius: 15px;
-    border: 8px solid rgba(0, 255, 255, .2);
+    background-color: var(--renk-kart-zemin);
+    backdrop-filter: var(--kart-blur);
+    border-radius: var(--radius-kart);
+    border: 2px solid var(--renk-kart-cizgi);
 }
 
 .card img{
@@ -62,7 +47,7 @@
     text-align: center;
     font-size: 1.5rem;
     font-weight: 800;
-    color: whitesmoke;
+    color: var(--renk-metin-ana);
     padding: .5em 0;
 }
 

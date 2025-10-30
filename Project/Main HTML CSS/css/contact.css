@@ -1,19 +1,4 @@
 /*Contact HTML's CSS*/
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --Blue600: rgb(30, 80, 180);
-    --Navy950: rgb(10, 25, 60);
-    --Navy900: rgb(28, 50, 120);
-    --Blue500: rgb(100, 149, 237);
-    --Navy200: rgb(173, 216, 230);
-}
-
 .help {
     min-height: 80vh;
     display: grid;
@@ -33,10 +18,15 @@
 }
 
 .box {
-    background-color: var(--Navy950);
+    background-color: var(--renk-kart-zemin);
     border-radius: 15px;
-    border: 8px solid rgba(0, 255, 255, .2);
+    border: 2px solid var(--renk-kart-cizgi);
     padding: 1em 0;
+    backdrop-filter: var(--kart-blur);
+}
+
+.box i{
+    color: var(--renk-vurgu-hover);
 }
 
 
@@ -82,6 +72,7 @@
 
 .buttons a i {
     margin-right: 0.5em;
+    color: var(--renk-vurgu-hover);
 }
 
 .buttons a {
@@ -108,7 +99,7 @@
         'box-11 box-11'
         'box-12 box-12'
         'box-13 box-13';
-    gap: 1em;
+    gap: 2em;
     font-weight: 600;
     margin: 0 5em;
 }
@@ -129,7 +120,7 @@
     height: 100%;
     background: transparent;
     outline: none;
-    border: 3px solid rgba(100, 255, 255, .6);
+    border: 3px solid var(--renk-kart-cizgi);
     border-radius: 10px;
     font-size: 16px;
     color: #fff;
@@ -144,11 +135,10 @@
 
 input:focus~span,
 input:valid~span {
-    transform: translateX(8px) translateY(-23px);
-    background: var(--Navy950);
-    border-left: 2px solid rgba(100, 255, 255, .6);
-    border-right: 2px solid rgba(100, 255, 255, .6);
+    transform: translateX(8px) translateY(-32px);
+    background: transparent;
     padding: 0 5px;
+    color: var(--renk-vurgu-hover);
     transition: .1s ease-in-out;
 }
 

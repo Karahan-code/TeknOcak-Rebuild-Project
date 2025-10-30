@@ -1,23 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
-    :root {
-        --Blue600: rgb(30, 80, 180);
-        /* eski Purple600 yerine orta koyu mavi */
-        --Navy950: rgb(10, 25, 60);
-        /* koyu mavi, eski Navy950 yerine */
-        --Navy900: rgb(28, 50, 120);
-        /* orta koyu mavi, eski Navy900 yerine */
-        --Blue500: rgb(100, 149, 237);
-        /* eski Purple500 yerine açık mavi */
-        --Navy200: rgb(173, 216, 230);
-        /* eski açık mor yerine açık gökyüzü mavisi */
-    }
-
+/*Login CSS*/
 .login{
     min-height: 80vh;
     display: flex;
@@ -27,9 +8,10 @@
 
 .wrap{
     width: 420px;
-    background-color: var(--Blue600);
-    border: 5px solid rgba(0, 255, 255, .2);
+    background-color: var(--renk-kart-zemin);
+    border: 2px solid var(--renk-kart-cizgi);
     box-shadow: 0 0 10px rgba(0,0,0,.2);
+    backdrop-filter: var(--kart-blur);
     padding: 20px 25px;
     color: #fff;
     border-radius: 10px;
@@ -53,7 +35,7 @@
     height: 100%;
     background: transparent;
     outline: none;
-    border: 3px solid rgba(100, 255, 255,.6);
+    border: 3px solid var(--renk-kart-cizgi);
     border-radius: 10px;
     font-size: 16px;
     color: #fff;
@@ -68,12 +50,11 @@
 
 input:focus ~ span,
 input:valid ~ span{
-    transform: translateX(8px) translateY(-23px);
-    background: var(--Blue600);
-    border-left: 2px solid rgba(100, 255, 255,.6);
-    border-right: 2px solid rgba(100, 255, 255,.6);
+    transform: translateY(-32px);
+    background: transparent;
     padding: 0 5px;
     transition: .1s ease-in-out;
+    color: var(--renk-vurgu-hover);
 }
 
 .input-box input::placeholder{

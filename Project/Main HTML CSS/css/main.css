@@ -9,18 +9,35 @@
         box-sizing: border-box;
     }
 
+    /* ===========================================
+           Renk Paleti Değişkenleri
+           =========================================== */
     :root {
-        --Blue600: rgb(30, 80, 180);
-        --Navy950: rgb(10, 25, 60);
-        --Navy900: rgb(28, 50, 120);
-        --Blue500: rgb(100, 149, 237);
-        --Navy200: rgb(173, 216, 230);
+        /* Ana Arka Plan */
+        --renk-bg-1: #004e92;
+        --renk-bg-2: #000428;
+        /* Metin Renkleri */
+        --renk-metin-ana: #F5F5F5;
+        --renk-metin-ikincil: #adb5bd;
+        /* VURGU RENKLERİ */
+        --renk-vurgu: #F48C06;
+        --renk-vurgu-hover: #E85D04;
+        /* Kart (Glassmorphism) Stilleri */
+        --renk-kart-zemin: rgba(255, 255, 255, 0.1);
+        --renk-kart-cizgi: rgba(255, 255, 255, 0.2);
+        --kart-blur: blur(10px);
+        /* Sistem Renkleri */
+        --renk-hata: #FF6B6B;
+        --renk-basari: #3DDC97;
+        /* Standart Stiller */
+        --radius-kart: 16px;
+        --golge-kart: 0 4px 30px rgba(0, 0, 0, 0.1);
     }
 
     body {
         min-height: 100vh;
-        background: url(/Project/assets/images/main/bg.png),
-        linear-gradient(to right, #004e92, #000428);
+        background: url(/Project/assets/images/main/star.png),
+            linear-gradient(to right, var(--renk-bg-1), var(--renk-bg-2));
         background-size: auto-fit, cover;
         background-attachment: fixed;
         color: whitesmoke;
@@ -37,10 +54,9 @@
         width: 100%;
         position: sticky;
         top: 0;
-        background: var(--Navy950);
-        border-bottom: 5px solid var(--Blue500);
-        border-radius: 50px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        background: var(--renk-bg-1);
+        border-bottom: 5px solid var(--renk-kart-cizgi);
+        box-shadow: var(--golge-kart);
         z-index: 999;
     }
 
@@ -56,7 +72,7 @@
     .navbar-logo {
         font-size: 2rem;
         font-weight: 600;
-        color: #fff;
+        color: var(--renk-metin-ana);
         text-decoration: none;
         cursor: pointer;
         animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s both;
@@ -74,12 +90,11 @@
         color: #fff;
         font-weight: 500;
         padding: 10px 20px;
-        border-radius: 20px;
         transition: all 0.7s ease;
         white-space: nowrap;
         -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s both;
         animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s both;
-        
+
     }
 
     .navbar-menu li a i {
@@ -88,17 +103,15 @@
     }
 
     .navbar-container .navbar-menu li a:hover {
-        border-bottom: 1px solid;
-        transition: .6s ease-in-out;
-        scale: 1.02;
-        border-radius: 0;
+        transition: .2s ease-in-out;
+        color: var(--renk-vurgu-hover);
     }
 
     .navbar-container a:hover {
-        transition: .5s ease-in-out;
-        scale: 1.02;
-        border-radius: 0;
+        transition: .2s ease-in-out;
+        color: var(--renk-vurgu-hover);
     }
+
 
     .navbar-toggle {
         display: none;
@@ -130,7 +143,9 @@
         position: absolute;
         right: 0;
         top: 100%;
-        background: var(--Blue600);
+        background: var(--renk-kart-zemin);
+        border: 2px solid var(--renk-kart-cizgi);
+        backdrop-filter: var(--kart-blur);
         border-radius: 10px;
         list-style: none;
         text-align: start;
@@ -138,7 +153,7 @@
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         min-width: 200px;
         z-index: 1000;
-        margin-top: 18px;
+        margin-top: 24px;
         animation: scale-up-hor-center 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     }
 
@@ -153,7 +168,12 @@
     }
 
     #dropdown .dropdown-toggle i {
-        padding-right: 28px;
+        padding-right: 20px;
+    }
+
+    #dropdown .dropdown-toggle:hover {
+        transition: 0.2s ease-in-out;
+        color: var(--renk-vurgu-hover);
     }
 
     .dropdown-menu-show {
@@ -165,11 +185,6 @@
         color: white;
         text-decoration: none;
         transition: ease-in-out 0.3s;
-    }
-
-    .dropdown-menu li a:hover {
-        background: var(--Blue500);
-        color: white;
     }
 
     /* Giriş yapılınca görünürlük değişimi */
@@ -194,8 +209,8 @@
         text-align: center;
         text-decoration: none;
         height: 7em;
-        background-color: var(--Navy950);
-        box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+        background-color: var(--renk-bg-1);
+        box-shadow: var(--golge-kart);
         color: #fff;
     }
 
@@ -207,22 +222,26 @@
         font-size: 1.8rem !important;
         color: #fff;
         margin: 0 0.2em;
+        background-color: var(--renk-kart-zemin);
+        border: 2px solid var(--renk-kart-cizgi);
+        border-radius: 40%;
+        padding: 10px 15px;
     }
 
     .contact .contact-btns a i:hover {
-        color: var(--Purple600);
+        color: var(--renk-vurgu-hover);
         transition: 0.2s ease-in-out;
     }
 
 
     .contact .contact-text h5 {
         font-size: 1rem;
-        border-top: 2px solid;
+        border-top: 2px solid var(--renk-kart-cizgi);
         padding: 0.5em 0;
     }
 
     .contact-text h5 a {
-        color: aqua;
+        color: var(--renk-vurgu-hover);
         text-decoration: none;
     }
 
@@ -322,5 +341,15 @@
         100% {
             -webkit-transform: scaleX(1);
             transform: scaleX(1);
+        }
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotateY(0deg);
+        }
+
+        100% {
+            transform: rotateY(360deg);
         }
     }

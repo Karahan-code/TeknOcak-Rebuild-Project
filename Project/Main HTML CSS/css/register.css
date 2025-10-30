@@ -1,18 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
-:root {
-    --Blue600: rgb(30, 80, 180);
-    --Navy950: rgb(10, 25, 60);
-    --Navy900: rgb(28, 50, 120);
-    --Blue500: rgb(100, 149, 237);
-    --Navy200: rgb(173, 216, 230);
-}
-
+/*Register CSS*/
 .register {
     min-height: 80vh;
     display: flex;
@@ -22,9 +8,10 @@
 
 .wrap {
     width: 40%;
-    background-color: var(--Blue600);
-    border: 5px solid rgba(0, 255, 255, .2);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    background-color: var(--renk-kart-zemin);
+    border: 2px solid var(--renk-kart-cizgi);
+    box-shadow: var(--golge-kart);
+    backdrop-filter: var(--kart-blur);
     padding: 20px 25px;
     margin: 1em;
     color: #fff;
@@ -66,8 +53,8 @@
     height: 100%;
     background: transparent;
     outline: none;
-    border: 3px solid rgba(100, 255, 255, .6);
-    border-radius: 10px;
+    border: 3px solid var(--renk-kart-zemin);
+    border-radius: var(--kart-blur);
     font-size: 16px;
     color: #fff;
     padding: 20px 45px 20px 20px;
@@ -81,10 +68,9 @@
 
 input:focus~span,
 input:valid~span {
-    transform: translateX(8px) translateY(-23px);
-    background: var(--Blue600);
-    border-left: 2px solid rgba(100, 255, 255, .6);
-    border-right: 2px solid rgba(100, 255, 255, .6);
+    transform: translateY(-32px);
+    background: transparent;
+    color: var(--renk-vurgu);
     padding: 0 5px;
     transition: .1s ease-in-out;
 }
@@ -100,6 +86,7 @@ input:valid~span {
     top: 50%;
     transform: translateY(-50%);
     font-size: 20px;
+    color: var(--renk-vurgu);
 }
 
 .wrap .box10,
@@ -108,13 +95,13 @@ input:valid~span {
     display: flex;
     justify-content: center;
     align-items: center;
-        border: 3px solid rgba(100, 255, 255, .6);
-    border-radius: 10px;
+    border: 3px solid var(--renk-kart-cizgi);
+    border-radius: var(--kart-blur);
 }
 
 .button button {
     background: transparent;
-    border: 3px solid rgba(100, 255, 255, .6);
+    border: 3px solid var(--renk-kart-cizgi);
     border-radius: 10px;
     color: #fff;
     padding: 10px 20px;
@@ -126,6 +113,7 @@ input:valid~span {
     box-shadow: 0 0 20px rgba(100, 255, 255, .6);
     transition: 0.2s ease-in-out;
     transform: translateY(-2px);
+    background-color: var(--renk-vurgu);
 }
 
 /*Selection*/

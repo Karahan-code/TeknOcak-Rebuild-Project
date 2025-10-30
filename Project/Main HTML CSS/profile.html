@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destek</title>
-    <link rel="stylesheet" href="/Project/Main HTML CSS/css/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/profile.css">
     <script src="/Project/js/ui.js" defer></script>
     <script src="/Project/js/api.js" defer></script>
@@ -22,21 +22,21 @@
                 <span class="bar"></span>
             </button>
             <ul class="navbar-menu">
-                <li><a href="#"><i class="fa-solid fa-bell"></i> Duyurular</a></li>
-                <li><a href="#"><i class="fa-solid fa-flag-checkered"></i> Yarışmalar</a></li>
-                <li><a href="#"><i class="fa-solid fa-phone"></i> Destek</a></li>
+                <li><a href="notice.html"><i class="fa-solid fa-bell"></i> Duyurular</a></li>
+                <li><a href="competitions.html"><i class="fa-solid fa-flag-checkered"></i> Yarışmalar</a></li>
+                <li><a href="contact.html"><i class="fa-solid fa-phone"></i> Destek</a></li>
                 <!-- Giriş öncesi -->
-                <li class="auth"><a href="#"><i class="fa-solid fa-right-to-bracket"></i> Giriş Yap</a></li>
-                <li class="auth"><a href="#"><i class="fa-solid fa-user-plus"></i> Kayıt Ol</a></li>
+                <li class="auth"><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Giriş Yap</a></li>
+                <li class="auth"><a href="register.html"><i class="fa-solid fa-user-plus"></i> Kayıt Ol</a></li>
                 <!-- Giriş sonrası (dropdown menü) -->
                 <li class="user-item dropdown" id="dropdown">
                     <button class="dropdown-toggle" id="userbtn"><i class="fa-solid fa-user"></i>Kullanıcı</button>
                     <ul class="dropdown-menu" id="dropdownMenu">
-                        <li><a href="#"><i class="fa-regular fa-user"></i>Profilim</a></li>
-                        <li><a href="#"><i class="fa-regular fa-bell"></i>Bildirimlerim</a></li>
-                        <li><a href="#"><i class="fa-solid fa-users fa-beat"></i>Takımlarım</a></li>
-                        <li><a href="#"><i class="fa-regular fa-flag"></i>Yarışmalarım</a></li>
-                        <li><a href="#"><i class="fa-regular fa-file"></i>Başvurularım</a></li>
+                        <li><a href="profile.html"><i class="fa-regular fa-user"></i>Profilim</a></li>
+                        <li><a href="profile.html"><i class="fa-regular fa-bell"></i>Bildirimlerim</a></li>
+                        <li><a href="profile.html"><i class="fa-solid fa-users fa-beat"></i>Takımlarım</a></li>
+                        <li><a href="profile.html"><i class="fa-regular fa-flag"></i>Yarışmalarım</a></li>
+                        <li><a href="profile.htmls"><i class="fa-regular fa-file"></i>Başvurularım</a></li>
                         <li><a href="#" id="logOut"><i class="fa-solid fa-xmark"></i>Çıkış Yap</a></li>
                     </ul>
                 </li>
@@ -48,8 +48,8 @@
             <div class="profile">
                 <img src="/Project/assets/images/icons/avatar.png" alt="">
                 <h3>Öğrenci</h3>
-                <button>Bilgileri Güncelle</button>
-                <button>Hesabı sil</button>
+                <button class="btn-warning">Bilgileri Güncelle</button>
+                <button class="btn-danger">Hesabı sil</button>
             </div>
             <div class="info">
                 <div class="heading" style="grid-area: box-0;">

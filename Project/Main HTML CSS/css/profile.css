@@ -48,14 +48,16 @@
     height: auto;
     border-radius: 50%;
     border: 5px solid gray;
+    margin: 0.4em;
 }
 
 .profile h3 {
     font: 800;
     font-size: 1.5rem;
     text-align: center;
-    color: var(--Blue500);
-    border-bottom: 2px solid #fafafa;
+    color: var(--renk-vurgu);
+    border-bottom: 2px solid var(--renk-kart-cizgi);
+    padding-bottom: 0.2em;
 }
 
 .profile button {
@@ -63,10 +65,23 @@
     cursor: pointer;
     color: #fafafa;
     padding: 5px 5px;
-    border: 2px solid #fff;
-    border-radius: 50px;
+    border: 2px solid var(--renk-kart-cizgi);
+    border-radius: 5px;
+    width: 50%;
 }
 
+.btn-warning:hover{
+    background-color: var(--renk-vurgu);
+    transition: 0.3s ease;
+    box-shadow: var(--golge-kart);
+}
+
+
+.btn-danger:hover{
+    background-color: red;
+    transition: 0.3s ease;
+    box-shadow: var(--golge-kart);
+}
 
 .info {
     display: grid;
@@ -87,13 +102,13 @@
     font-weight: 800;
     color: var(--Blue600);
     text-align: center;
-    border-bottom: 2px solid var(--Blue600);
+    border-bottom: 2px solid var(--renk-kart-cizgi);
     padding: 0.5em 0;
 }
 
 .info-card {
     padding: 10px 10px;
-    border: 2px solid rgba(0, 255, 255, .2);
+    border: 2px solid var(--renk-kart-cizgi);
     border-radius: 10px;
     text-align: center;
 }
@@ -110,9 +125,9 @@
     flex-direction: column;
     width: 50%;
     height: auto;
-    border: 5px solid rgba(0, 255, 255, .2);
-    border-radius: 5px;
-    backdrop-filter: blur(50px);
+    border: 2px solid var(--renk-kart-cizgi);
+    border-radius: var(--radius-kart);
+    backdrop-filter: var(--kart-blur);
     gap: 5em;
     margin: 3em 0;
 }
@@ -126,7 +141,7 @@
     text-align: center;
     width: 90%;
     height: 80%;
-    border: 2px dashed rgba(0, 255, 255, .2);
+    border: 2px dashed var(--renk-kart-cizgi);
     margin-bottom: 5em;
 }
 
