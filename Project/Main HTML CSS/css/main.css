@@ -42,6 +42,7 @@
         background-attachment: fixed;
         color: whitesmoke;
         font-family: "Rubik", sans-serif;
+        overflow-x: hidden;
     }
 
     /*Navbar*/
@@ -353,3 +354,192 @@
             transform: rotateY(360deg);
         }
     }
+
+    /*Animation Pulse*/
+
+    @-webkit-keyframes pulsate-fwd {
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+
+        50% {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+
+    @keyframes pulsate-fwd {
+        0% {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+
+        50% {
+            box-shadow: 0 0 50px rgba(255, 255, 255, 0.4);
+            -webkit-transform: scale(1.1);
+            transform: scale(1.05);
+        }
+
+        100% {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+
+    /**
+ * ----------------------------------------
+ * animation tilt-in-right-2
+ * ----------------------------------------
+ */
+    @-webkit-keyframes tilt-in-right-2 {
+        0% {
+            -webkit-transform: rotateX(30deg) translateX(300px) skewX(-30deg);
+            transform: rotateX(30deg) translateX(300px) skewX(-30deg);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: rotateX(0deg) translateX(0) skewX(0deg);
+            transform: rotateX(0deg) translateX(0) skewX(0deg);
+            opacity: 1;
+        }
+    }
+
+    @keyframes tilt-in-right-2 {
+        0% {
+            -webkit-transform: rotateX(30deg) translateX(300px) skewX(-30deg);
+            transform: rotateX(30deg) translateX(300px) skewX(-30deg);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: rotateX(0deg) translateX(0) skewX(0deg);
+            transform: rotateX(0deg) translateX(0) skewX(0deg);
+            opacity: 1;
+        }
+    }
+/**
+ * ----------------------------------------
+ * animation slide-in-right
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-in-left
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+/**
+ * ----------------------------------------
+ * animation tracking-in-expand
+ * ----------------------------------------
+ */
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/**
+ * ----------------------------------------
+ * animation flip-in-hor-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes flip-in-hor-top {
+  0% {
+    -webkit-transform: rotateX(-80deg);
+            transform: rotateX(-80deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+    opacity: 1;
+  }
+}
+@keyframes flip-in-hor-top {
+  0% {
+    -webkit-transform: rotateX(-80deg);
+            transform: rotateX(-80deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+    opacity: 1;
+  }
+}

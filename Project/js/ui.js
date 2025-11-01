@@ -7,8 +7,8 @@ const navbarToggle = document.querySelector('.navbar-toggle');
 const navbarMenu = document.querySelector('.navbar-menu');
 
 navbarToggle.addEventListener('click', () => {
-    navbarToggle.classList.toggle('active');
-    navbarMenu.classList.toggle('active');
+  navbarToggle.classList.toggle('active');
+  navbarMenu.classList.toggle('active');
 })
 
 //Navbar kullanıcı ekranı Dropdown Click
@@ -16,56 +16,49 @@ const dropdownToggle = document.getElementById('userbtn');
 const dropdownMenu = document.getElementById('dropdownMenu');
 
 dropdownToggle.addEventListener('click', () => {
-    dropdownMenu.classList.toggle("dropdown-menu-show");
+  dropdownMenu.classList.toggle("dropdown-menu-show");
 })
 
 //Carousel Slider
 const swiper = new Swiper('.swiper', {
-    loop: true,
-    centeredSlides: true,
-    spaceBetween: 30,
-    grabCursor: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
+  loop: true,
+  centeredSlides: true,
+  spaceBetween: 30,
+  grabCursor: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
     },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
+    768: {
+      slidesPerView: 2,
     },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+    1024: {
+      slidesPerView: 3,
     },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
-    },
-  });
+  },
+});
 
 
-  //Şifre Görüntüleme Düzenlenecek
+//Faq list Animasyon
 
-  const passwordİcon = document.getElementById('Shower');
-  const passwordİnput = document.getElementById('password');
+const faqs = document.querySelectorAll('.faq-list');
 
+faqs.forEach(faq => {
+    const ques = faq.querySelector('.ques');
 
-  passwordİcon.addEventListener('click'),function btn() {
-    let type = passwordİnput.getAttribute('type');
-    let icon = passwordİcon.getAttribute('class');
-    if (type === 'password'){
-      passwordİnput.setAttribute('type','text');
-      icon.setAttribute('class','fa-solid da-eye');
-    }else{
-      passwordİnput.setAttribute('type','password');
-      icon.setAttribute('class','fa-solid da-eye-slash');
-    }
-  }
-
+    ques.addEventListener('click', () => {
+        faq.classList.toggle('active-faq');
+    });
+});

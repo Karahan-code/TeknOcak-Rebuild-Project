@@ -23,12 +23,15 @@
 .tekno-img::before {
     content: '';
     display: block;
-    height: 345px;
+    height: 350px;
     width: 345px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
     z-index: -1;
     position: absolute;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    -webkit-animation: pulsate-fwd 1.8s ease-in-out infinite both;
+    animation: pulsate-fwd 1.8s ease-in-out infinite both;
 }
 
 .main-container .text {
@@ -36,14 +39,14 @@
     padding: 20px 50px;
     color: var(--renk-metin-ana);
     border: 2px solid var(--renk-kart-cizgi);
-    border-radius: var(--radius-kart);
     font-size: 1.2rem;
     text-align: center;
     background: var(--renk-kart-zemin);
     backdrop-filter: var(--kart-blur);
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
-    -webkit-animation: scale-up-hor-center 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation: scale-up-hor-center 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    -webkit-animation: tilt-in-right-2 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: tilt-in-right-2 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
 }
 
 .text p {
@@ -55,8 +58,6 @@
 .text h1 {
     color: var(--renk-metin-ikincil);
     text-align: center;
-    -webkit-animation: scale-up-hor-center 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation: scale-up-hor-center 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 
@@ -90,6 +91,10 @@
     max-width: 1000px;
     padding: 50px 0;
     text-align: center;
+    -webkit-animation: flip-in-hor-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: flip-in-hor-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-timeline: view();
+    animation-range: cover 15% cover 50%;
 }
 
 .content {
@@ -100,12 +105,16 @@
 
 .content h2 {
     padding-bottom: 2em;
+    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation-timeline: view();
+    animation-range: cover 10% cover 50vh;
 }
 
 .swiper-slide {
     height: 80%;
     background: var(--renk-kart-zemin);
-    backdrop-filter: var( --kart-blur);
+    backdrop-filter: var(--kart-blur);
     border-radius: 15px;
     overflow: hidden;
     transition: transform 0.4s ease, opacity 0.4s ease;
@@ -146,7 +155,7 @@
     border-radius: 50%;
     transform: translateY(-50%);
     transition: 0.3s ease;
-        background: var(--renk-kart-zemin);
+    background: var(--renk-kart-zemin);
 }
 
 .swiper-button-next:hover,
@@ -171,7 +180,20 @@
 }
 
 .details .heading h3 {
-    color: var(--Purple600);
+    color: var(--renk-metin-ana);
+}
+
+.details .heading h4 {
+    padding-bottom: 1em;
+    border-bottom: 2px solid var(--renk-kart-cizgi);
+}
+
+.heading h3,
+h4 {
+    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation-timeline: view();
+    animation-range: cover 10% cover 40%;
 }
 
 .details .wrap {
@@ -184,6 +206,11 @@
 
 .wrap .faq {
     width: 50%;
+    -webkit-animation: tilt-in-right-2 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: tilt-in-right-2 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-timeline: view();
+    animation-range: cover 10% cover 40%;
+    backdrop-filter: var(--kart-blur);
 }
 
 .faq h4 {
@@ -197,37 +224,64 @@
     height: auto;
     width: 40%;
     margin: 1em 2em;
+    -webkit-animation: slide-in-left 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-left 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-timeline: view();
+    animation-range: entry 15% cover 50vh;
 }
 
-.video video{
+.video video {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
 
-details {
+.faq-list {
     background-color: var(--renk-kart-zemin);
     border: 1px solid var(--renk-kart-cizgi);
     padding: 0.5rem 1rem;
     font-size: 1.2rem;
-    backdrop-filter: var(--kart-blur);
 }
 
-summary {
-    line-height: 1.3;
-    margin-inline-start: 1rem;
+.faq-list p span {
+    color: var(--renk-vurgu);
+}
+
+.faq-list .ques {
     list-style-position: outside;
-    color: var(--Purple600);
+    color: var(--renk-metin-ana);
     cursor: pointer;
+    padding: 10px 10px;
+    font-size: 1.3rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-summary::marker {
-    color: var(--Navy200);
+.faq-list .ans p {
+    border-top: 1px solid var(--renk-kart-cizgi);
+    padding: 0.5em 0;
 }
 
+.ans {
+    max-height: 0;
+    width: 100%;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
 
-.details p {
-    margin: 0.5em 0;
+.faq-list .ques i {
+    transition: transform 0.3s ease;
+    color: var(--renk-vurgu);
+}
+
+.faq-list.active-faq .ans {
+    max-height: 300px;
+}
+
+.faq-list.active-faq .ques i {
+    transform: rotate(45deg);
 }
 
 /*Faq section 2*/
@@ -241,13 +295,18 @@ summary::marker {
 
 .hero h2 {
     text-align: center;
-    margin: 1em 0;
-    padding: 1em 0;
-    border-bottom: 2px solid;
+    margin-bottom: 1em ;
+    padding-bottom: 1em ;
+    border-bottom: 2px solid var(--renk-kart-cizgi);
 }
 
 .hero .faq {
     width: 60%;
+    -webkit-animation: flip-in-hor-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: flip-in-hor-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-timeline: view();
+    animation-range: cover 20% cover 50%;
+    backdrop-filter: var(--kart-blur);
 }
 
 
@@ -280,7 +339,8 @@ summary::marker {
     .hero .faq {
         width: 80%;
     }
-    .wrap .video{
+
+    .wrap .video {
         width: 80%;
         height: auto;
     }
@@ -305,5 +365,22 @@ summary::marker {
     .tekno-img::before {
         width: 190px;
         height: 190px;
+    }
+
+    /*Animasyon Kapatma*/
+    .swiper {
+        animation: none !important;
+        -webkit-animation: none !important;
+        opacity: 1 !important;
+        transform: translateX(0) !important;
+        -webkit-transform: translateX(0) !important;
+    }
+
+    .content h2 {
+        animation: none !important;
+        -webkit-animation: none !important;
+        opacity: 1 !important;
+        transform: translateX(0) !important;
+        -webkit-transform: translateX(0) !important;
     }
 }
