@@ -26,35 +26,43 @@
 .card{
     display: flex;
     height: auto;
-    width: 60%;
+    width: 50%;
     justify-content: center;
     align-items: center;
-    margin: 1em .5em;
+    text-align: center;
+    margin: 1em 0;
     background-color: var(--renk-kart-zemin);
     backdrop-filter: var(--kart-blur);
-    border-radius: var(--radius-kart);
     border: 2px solid var(--renk-kart-cizgi);
+    gap: 1em;
 }
 
 .card img{
-    width: 400px;
+    width: 35%;
     height: auto;
     max-height: 400px;
     border-radius: 10px !important;
+    margin: 0.5em 0.5em;
 }
 
 .card .text h3{
-    text-align: center;
     font-size: 1.5rem;
     font-weight: 800;
-    color: var(--renk-metin-ana);
-    padding: .5em 0;
+    color: var(--renk-vurgu);
+    margin: 1em 0;
+}
+
+.card .text span{
+    color: var(--renk-vurgu-hover);
+    font-weight: 800;
 }
 
 .text p{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    padding: 1em 1em;
+    padding-inline: 1em;
+    padding-block: 0 1em;
+    text-align: start !important;
 }
 
 .card:hover{

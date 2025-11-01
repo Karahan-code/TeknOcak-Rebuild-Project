@@ -73,8 +73,7 @@
     font-weight: 600;
 }
 
-.text a:hover,
-.card-content .card-button:hover {
+.text a:hover{
     transition: .4s ease;
     box-shadow: 0 0 50px rgb(100, 255, 235, .2);
     background-color: var(--renk-vurgu);
