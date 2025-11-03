@@ -5,7 +5,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destek</title>
+    <!--favicon links-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/Project/assets/images/main/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Project/assets/images/main/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Project/assets/images/main/favicon/favicon-96x96.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#f48c06">
+    <meta name="msapplication-TileColor" content="#f48c06">
+    <meta name="theme-color" content="#004e92">
+    <!--favicon links end-->
+    <title>TeknOcak - Profilim</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/profile.css">
     <script src="/Project/js/ui.js" defer></script>
@@ -13,6 +22,8 @@
 </head>
 
 <body>
+    <div class="preloader"><img src="/Project/assets/images/main/icons8-rocket.gif" alt="Yükleniyor..."></div>
+    <div class="menu-overlay" aria-current="page"></div>
     <nav class="navbar">
         <div class="navbar-container">
             <a href="home.html" class="navbar-logo">TeknOcak</a>
@@ -46,9 +57,10 @@
     <section class="help">
         <div class="card">
             <div class="profile">
-                <img src="/Project/assets/images/icons/avatar.png" alt="">
-                <h3>Öğrenci</h3>
-                <button class="btn-warning">Bilgileri Güncelle</button>
+                <img src="/Project/assets/images/icons/avatar.png" alt="Avatar">
+                <h3>Kullanıcı</h3>
+                <button type="submit" class="btn-warning">Bilgileri Güncelle</button>
+                </form>
                 <button class="btn-danger">Hesabı sil</button>
             </div>
             <div class="info">
@@ -57,50 +69,78 @@
                 </div>
                 <div class="info-card" style="grid-area: box-1;">
                     <h4>TCK NO</h4>
-                    <span>**********</span>
+                    <input type="text" value="**********" placeholder="TC No giriniz">
                 </div>
                 <div class="info-card" style="grid-area: box-2;">
                     <h4>Eğitim</h4>
-                    <span>Üniversite</span>
+                    <input type="text" value="Üniversite" placeholder="Eğitim bilgisi...">
                 </div>
                 <div class="info-card" style="grid-area: box-3;">
                     <h4>Telefon</h4>
-                    <span>05*********</span>
+                    <input type="text" value="05*********" placeholder="Telefon...">
                 </div>
                 <div class="info-card" style="grid-area: box-4;">
                     <h4>Şehir</h4>
-                    <span>Ankara</span>
+                    <input type="text" value="Ankara" placeholder="Şehir...">
                 </div>
                 <div class="info-card" style="grid-area: box-5;">
                     <h4>Cinsiyet</h4>
-                    <span>Erkek</span>
+                    <input type="text" value="Erkek" placeholder="...">
                 </div>
                 <div class="info-card" style="grid-area: box-6;">
                     <h4>Doğum Tarihi</h4>
-                    <span>00.00.0000</span>
+                    <input type="text" value="00.00.0000" placeholder="doğum tarihi giriniz">
                 </div>
                 <div class="info-card" style="grid-area: box-7;">
                     <h4>E-posta</h4>
-                    <span>*********@gmail.com</span>
+                    <input type="email" value="*********@gmail.com" placeholder="e-posta giriniz..">
                 </div>
             </div>
         </div>
         <div class="card-wrap">
             <h3>Bildirimlerim</h3>
-            <div class="bildirim">
-                <h3>Bildiriminiz Bulunmamaktadır!</h3>
+            <div class="notification-list">
+                <div class="notification-item unread">
+                    <i class="icon fa-solid fa-check-circle icon-success"></i>
+                    <div class="text">
+                        <p><strong>"Deniz Lojistiği"</strong> yarışmasına başvurunuz onaylandı!</p>
+                        <span>Az önce</span>
+                    </div>
+                </div>
+                <div class="notification-item">
+                    <i class="icon fa-solid fa-triangle-exclamation icon-warning"></i>
+                    <div class="text">
+                        <p><strong>"Giyilebilir Teknoloji"</strong> yarışması için ön rapor yükleme tarihi yaklaşıyor.
+                        </p>
+                        <span>1 gün önce</span>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="card-wrap">
             <h3>Takımlarım</h3>
-            <div class="bildirim">
-                <h3>Takımlarınız Bulunmamaktadır!</h3>
-            </div>
+            <button class="btn-create-team"><i class="fa-solid fa-plus"></i> Yeni Takım Kur</button>
+            <ul class="team-list">
+                <li>
+                    <span>Altay Teknoloji Kulübü</span>
+                    <span class="role-captain">Kaptan</span>
+                </li>
+            </ul>
         </div>
         <div class="card-wrap">
             <h3>Yarışmalarım</h3>
-            <div class="bildirim">
-                <h3>Yarışmalarınız Bulunmamaktadır!</h3>
+            <div class="competition-list">
+                <div class="competition-item-card">
+                    <img src="/Project/assets/images/yarışmalar/deniz.png" alt="Deniz Lojistiği">
+                    <div class="info">
+                        <h4>Deniz Lojistiği ve Güvenliği Proje Yarışması</h4>
+                        <p>Başvuru Tarihi: 01.11.2025</p>
+                    </div>
+                    <div class="status status-approved">
+                        <i class="fa-solid fa-check-circle"></i> <span>Onaylandı!</span>
+                    </div>
+                    <a href="yarismadetay.html" class="btn-detail-small">Detay</a>
+                </div>
             </div>
         </div>
         <div class="card-wrap">

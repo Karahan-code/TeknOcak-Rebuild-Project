@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yarışma Detayı - TeknOcak</title>
+    <!--favicon links-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/Project/assets/images/main/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Project/assets/images/main/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Project/assets/images/main/favicon/favicon-96x96.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#f48c06">
+    <meta name="msapplication-TileColor" content="#f48c06">
+    <meta name="theme-color" content="#004e92">
+    <!--favicon links end-->
+    <title>TeknOcak - Yarışma Detayı</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/yarışmabilgi.css">
     <script src="/Project/js/api.js" defer></script>
     <script src="/Project/js/ui.js" defer></script>
-    </head>
+</head>
+
 <body>
+    <div class="preloader"><img src="/Project/assets/images/main/icons8-rocket.gif" alt="Yükleniyor..."></div>
+    <div class="menu-overlay" aria-current="page"></div>
     <nav class="navbar">
         <div class="navbar-container">
-            <a href="home.html" class="navbar-logo">Tekn<span>Ocak</span></a>
+            <a href="home.html" class="navbar-logo">TeknOcak</a>
             <button class="navbar-toggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -23,13 +36,29 @@
                 <li><a href="notice.html"><i class="fa-solid fa-bell"></i> Duyurular</a></li>
                 <li><a href="yarışmalar.html"><i class="fa-solid fa-flag-checkered"></i> Yarışmalar</a></li>
                 <li><a href="contact.html"><i class="fa-solid fa-phone"></i> Destek</a></li>
-                </ul>
+                <!-- Giriş öncesi -->
+                <li class="auth"><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Giriş Yap</a></li>
+                <li class="auth"><a href="register.html"><i class="fa-solid fa-user-plus"></i> Kayıt Ol</a></li>
+                <!-- Giriş sonrası (dropdown menü) -->
+                <li class="user-item dropdown" id="dropdown">
+                    <button class="dropdown-toggle" id="userbtn"><i class="fa-solid fa-user"></i>Kullanıcı</button>
+                    <ul class="dropdown-menu" id="dropdownMenu">
+                        <li><a href="profile.html"><i class="fa-regular fa-user"></i>Profilim</a></li>
+                        <li><a href="profile.html"><i class="fa-regular fa-bell"></i>Bildirimlerim</a></li>
+                        <li><a href="profile.html"><i class="fa-solid fa-users fa-beat"></i>Takımlarım</a></li>
+                        <li><a href="profile.html"><i class="fa-regular fa-flag"></i>Yarışmalarım</a></li>
+                        <li><a href="profile.htmls"><i class="fa-regular fa-file"></i>Başvurularım</a></li>
+                        <li><a href="#" id="logOut"><i class="fa-solid fa-xmark"></i>Çıkış Yap</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </nav>
     <div class="competition-detail-page">
         <header class="detail-hero">
             <div class="hero-info">
-                <img src="/Project/assets/images/yarışmalar/deniz.png" alt="Deniz Lojistiği Yarışması Logosu" class="hero-logo">
+                <img src="/Project/assets/images/yarışmalar/deniz.png" alt="Deniz Lojistiği Yarışması Logosu"
+                    class="hero-logo">
                 <h1>Deniz Lojistiği ve Güvenliği Proje Yarışması</h1>
             </div>
             <a href="yarışmalar.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Tüm Yarışmalar</a>
@@ -37,7 +66,8 @@
         <div class="detail-wrapper">
             <nav class="content-sidebar">
                 <ul>
-                    <li><a href="#hakkinda" class="active-link"><i class="fa-solid fa-circle-info"></i> Yarışma Hakkında</a></li>
+                    <li><a href="#hakkinda" class="active-link"><i class="fa-solid fa-circle-info"></i> Yarışma
+                            Hakkında</a></li>
                     <li><a href="#takvim"><i class="fa-solid fa-calendar-days"></i> Yarışma Takvimi</a></li>
                     <li><a href="#oduller"><i class="fa-solid fa-trophy"></i> Yarışma Ödülleri</a></li>
                     <li><a href="#sartname"><i class="fa-solid fa-file-contract"></i> Yarışma Şartnamesi</a></li>
@@ -51,7 +81,11 @@
             <main class="content-main">
                 <section class="detail-card" id="hakkinda">
                     <h2><i class="fa-solid fa-circle-info"></i> Yarışma Hakkında</h2>
-                    <p>Yarışmanın amacı, deniz lojistiği sektöründe İnsansız Deniz Araçları (İDA) teknolojisi, teknolojik bilgi ve becerilerini birleştirerek topluma fayda sağlayacak yenilikçi projeler geliştirilmesini sağlamaktır. Lise düzeyindeki öğrencilerin denizcilik lojistiği alanına olan ilgilerini artırmak, onları denizcilik sektörü hakkında bilinçlendirmek ve bu alanda yaratıcı, yenilikçi düşünmelerini teşvik etmektir...</p>
+                    <p>Yarışmanın amacı, deniz lojistiği sektöründe İnsansız Deniz Araçları (İDA) teknolojisi,
+                        teknolojik bilgi ve becerilerini birleştirerek topluma fayda sağlayacak yenilikçi projeler
+                        geliştirilmesini sağlamaktır. Lise düzeyindeki öğrencilerin denizcilik lojistiği alanına olan
+                        ilgilerini artırmak, onları denizcilik sektörü hakkında bilinçlendirmek ve bu alanda yaratıcı,
+                        yenilikçi düşünmelerini teşvik etmektir...</p>
                     <h3 class="category-title">Yarışma Kategorileri</h3>
                     <div class="category-grid">
                         <div class="category-item">
@@ -78,7 +112,7 @@
                                 <li>Denizdeki yangın algılama ve erken uyarı sistemleri tasarımı</li>
                                 <li>Otonom yangın söndürme sistemleri ve ekipmanları</li>
                                 <li>Tahliye planları ve can kurtarma prosedürleri</li>
-                                </ul>
+                            </ul>
                             <a href="#" class="btn-apply">Bu Kategoriye Başvur</a>
                         </div>
                     </div>
@@ -106,7 +140,9 @@
                 </section>
                 <section class="detail-card" id="sartname">
                     <h2><i class="fa-solid fa-file-contract"></i> Yarışma Şartnamesi</h2>
-                    <p>Yarışmaya katılım sağlayacak tüm takımların aşağıda belirtilen genel kurallara ve etik ilkelere uyması zorunludur. Şartname, yarışmanın adil ve şeffaf bir ortamda yürütülmesini amaçlamaktadır.</p>
+                    <p>Yarışmaya katılım sağlayacak tüm takımların aşağıda belirtilen genel kurallara ve etik ilkelere
+                        uyması zorunludur. Şartname, yarışmanın adil ve şeffaf bir ortamda yürütülmesini amaçlamaktadır.
+                    </p>
                     <ul>
                         <li>Her takım en az 3, en fazla 6 kişiden oluşmalıdır.</li>
                         <li>Takım üyelerinin tamamı lise düzeyinde öğrenci olmalıdır.</li>
@@ -118,36 +154,48 @@
                 </section>
                 <section class="detail-card" id="sablonlar">
                     <h2><i class="fa-solid fa-file-lines"></i> Rapor Şablonları</h2>
-                    <p>Yarışma sürecinde teslim etmeniz gereken "Ön Rapor" ve "Final Raporu" için hazırlanan şablon dosyalarına aşağıdan ulaşabilirsiniz. Raporların bu şablonlara uygun olarak hazırlanması zorunludur.</p>
+                    <p>Yarışma sürecinde teslim etmeniz gereken "Ön Rapor" ve "Final Raporu" için hazırlanan şablon
+                        dosyalarına aşağıdan ulaşabilirsiniz. Raporların bu şablonlara uygun olarak hazırlanması
+                        zorunludur.</p>
                     <div class="download-grid">
-                        <a href="#" class="btn-download"><i class="fa-solid fa-file-word"></i> Ön Rapor Şablonu (.docx)</a>
-                        <a href="#" class="btn-download"><i class="fa-solid fa-file-word"></i> Final Rapor Şablonu (.docx)</a>
+                        <a href="#" class="btn-download"><i class="fa-solid fa-file-word"></i> Ön Rapor Şablonu
+                            (.docx)</a>
+                        <a href="#" class="btn-download"><i class="fa-solid fa-file-word"></i> Final Rapor Şablonu
+                            (.docx)</a>
                     </div>
                 </section>
                 <section class="detail-card" id="dokumanlar">
                     <h2><i class="fa-solid fa-book"></i> Yarışma Dokümanları</h2>
                     <p>Yarışma hakkında detaylı teknik bilgileri ve kuralları içeren ek dokümanlar.</p>
                     <div class="download-grid">
-                        <a href="#" class="btn-download"><i class="fa-solid fa-file-pdf"></i> Teknik Yeterlilik Rehberi</a>
+                        <a href="#" class="btn-download"><i class="fa-solid fa-file-pdf"></i> Teknik Yeterlilik
+                            Rehberi</a>
                         <a href="#" class="btn-download"><i class="fa-solid fa-file-pdf"></i> Güvenlik Talimatnamesi</a>
                     </div>
                 </section>
                 <section class="detail-card" id="grup">
                     <h2><i class="fa-solid fa-users"></i> Yarışma Grubu</h2>
-                    <p>Yarışma ile ilgili anlık duyuruları takip etmek, diğer takımlarla iletişim kurmak ve sorularınızı iletmek için resmi Discord sunucumuza veya Telegram grubumuza katılabilirsiniz.</p>
-                    </section>
+                    <p>Yarışma ile ilgili anlık duyuruları takip etmek, diğer takımlarla iletişim kurmak ve sorularınızı
+                        iletmek için resmi Discord sunucumuza veya Telegram grubumuza katılabilirsiniz.</p>
+                </section>
                 <section class="detail-card" id="destek">
                     <h2><i class="fa-solid fa-headset"></i> Yarışma Destekleri</h2>
-                    <p>Yarışma süreciyle ilgili teknik veya idari sorularınız için <a href="contact.html">Destek</a> sayfamızdan bize ulaşabilir veya doğrudan <strong>destek@teknocak.org</strong> adresine e-posta gönderebilirsiniz.</p>
+                    <p>Yarışma süreciyle ilgili teknik veya idari sorularınız için <a href="contact.html">Destek</a>
+                        sayfamızdan bize ulaşabilir veya doğrudan <strong>destek@teknocak.org</strong> adresine e-posta
+                        gönderebilirsiniz.</p>
                 </section>
                 <section class="detail-card" id="galeri">
                     <h2><i class="fa-solid fa-images"></i> Yarışma Galerisi</h2>
                     <p>Geçmiş yıllardan ve tanıtım etkinliklerinden görseller.</p>
                     <div class="gallery-grid">
-                        <img src="https://via.placeholder.com/300x200/cccccc/000000?text=Galeri+1" alt="Galeri Görseli 1">
-                        <img src="https://via.placeholder.com/300x200/cccccc/000000?text=Galeri+2" alt="Galeri Görseli 2">
-                        <img src="https://via.placeholder.com/300x200/cccccc/000000?text=Galeri+3" alt="Galeri Görseli 3">
-                        <img src="https://via.placeholder.com/300x200/cccccc/000000?text=Galeri+4" alt="Galeri Görseli 4">
+                        <img src="https://via.placeholder.com/300x200/cccccc/000000?text=Galeri+1"
+                            alt="Galeri Görseli 1">
+                        <img src="https://via.placeholder.com/300x200/cccccc/000000?text=Galeri+2"
+                            alt="Galeri Görseli 2">
+                        <img src="https://via.placeholder.com/300x200/cccccc/000000?text=Galeri+3"
+                            alt="Galeri Görseli 3">
+                        <img src="https://via.placeholder.com/300x200/cccccc/000000?text=Galeri+4"
+                            alt="Galeri Görseli 4">
                     </div>
                 </section>
             </main>
@@ -167,4 +215,5 @@
         </div>
     </footer>
 </body>
+
 </html>

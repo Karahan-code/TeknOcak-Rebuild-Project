@@ -1,181 +1,371 @@
-:root {
-    --Blue600: rgb(30, 80, 180);
-    --Navy950: rgb(10, 25, 60);
-    --Navy900: rgb(28, 50, 120);
-    --Blue500: rgb(100, 149, 237);
-    --Navy200: rgb(173, 216, 230);
-}
-
+/* ===========================================
+   YENİ PROFİL SAYFASI (profile.css)
+   =========================================== */
 
 .help {
-    min-height: 80vh;
+    width: 100%;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    gap: 2rem;
 }
 
-
+/* --- Ana Profil Kartı (Sidebar + İçerik) --- */
 .card {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: auto;
-    border: 2px solid var(--renk-kart-cizgi);
-    border-radius: var(--radius-kart);
+    flex-direction: row;
+    gap: 2rem;
+
+    background: var(--renk-kart-zemin);
     backdrop-filter: var(--kart-blur);
-    gap: 2em;
-    margin: 3em 0;
-}
-
-.profile {
-    width: 30%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 0.5em;
-    border: 2px solid var(--renk-kart-cizgi);
-    box-shadow: var(--golge-kart);
+    border: 1px solid var(--renk-kart-cizgi);
     border-radius: var(--radius-kart);
-    padding: 2em 0;
+    padding: 2rem;
+    box-shadow: var(--golge-kart);
 }
 
+/* --- Sol Sidebar (.profile) --- */
+.profile {
+    flex-basis: 30%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
-.card .profile img {
-    max-width: 6em;
-    height: auto;
+.profile img {
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    border: 5px solid gray;
-    margin: 0.4em;
+    border: 3px solid var(--renk-kart-cizgi);
+    background: #fff;
+    margin: 2rem 0;
 }
 
 .profile h3 {
-    font: 800;
     font-size: 1.5rem;
-    text-align: center;
-    color: var(--renk-vurgu);
+    color: var(--renk-metin-ana);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
     border-bottom: 2px solid var(--renk-kart-cizgi);
-    padding-bottom: 0.2em;
 }
 
-.profile button {
-    background: transparent;
-    cursor: pointer;
-    color: #fafafa;
-    padding: 5px 5px;
-    border: 2px solid var(--renk-kart-cizgi);
-    border-radius: 5px;
-    width: 50%;
-}
-
-.btn-warning:hover{
-    background-color: var(--renk-vurgu);
-    transition: 0.3s ease;
-    box-shadow: var(--golge-kart);
-}
-
-
-.btn-danger:hover{
-    background-color: red;
-    transition: 0.3s ease;
-    box-shadow: var(--golge-kart);
-}
-
+/* --- Sağ İçerik (.info) --- */
 .info {
+    flex-basis: 70%;
     display: grid;
-    grid-template-columns: 170px 200px;
-    grid-template-rows: repeat(50px, 5);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1.5rem;
     grid-template-areas:
-        'box-0 box-0'
-        'box-1 box-2'
-        'box-3 box-4'
-        'box-5 box-6'
-        'box-7 box-7';
-    gap: 0.5em;
-    margin: 0.5em;
+        "box-0 box-0"
+        "box-1 box-2"
+        "box-3 box-4"
+        "box-5 box-6"
+        "box-7 box-7";
 }
 
-.info h3 {
-    font-size: 1.2rem;
-    font-weight: 800;
-    color: var(--Blue600);
-    text-align: center;
-    border-bottom: 2px solid var(--renk-kart-cizgi);
-    padding: 0.5em 0;
+.competition-item-card .info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.info .heading {
+    border-bottom: 1px solid var(--renk-kart-cizgi);
+    padding-bottom: 1rem;
+}
+
+.info .heading h3 {
+    font-size: 1.5rem;
+    color: var(--renk-metin-ana);
 }
 
 .info-card {
-    padding: 10px 10px;
-    border: 2px solid var(--renk-kart-cizgi);
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    text-align: center;
+    padding: 1rem;
 }
 
 .info-card h4 {
-    text-align: start;
+    font-size: 0.9rem;
+    color: var(--renk-metin-ikincil);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
 }
 
+.info-card span,
+.info-card input {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--renk-metin-ana);
+    background: transparent;
+    border: none;
+    width: 100%;
+    font-family: "Rubik", sans-serif;
+}
 
+.info-card input:disabled {
+    color: var(--renk-metin-ikincil);
+}
+
+.info-card input::placeholder {
+    color: var(--renk-metin-ikincil);
+    font-weight: 400;
+}
+
+/* --- Alttaki Ayrı Kartlar --- */
 .card-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 50%;
-    height: auto;
-    border: 2px solid var(--renk-kart-cizgi);
-    border-radius: var(--radius-kart);
+    background: var(--renk-kart-zemin);
     backdrop-filter: var(--kart-blur);
-    gap: 5em;
-    margin: 3em 0;
+    border: 1px solid var(--renk-kart-cizgi);
+    border-radius: var(--radius-kart);
+    padding: 2rem;
+    box-shadow: var(--golge-kart);
 }
 
-.card-wrap h3 {
-    font-size: 1.3rem;
-    font-weight: 800;
+.card-wrap>h3 {
+    font-size: 1.5rem;
+    color: var(--renk-metin-ana);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--renk-kart-cizgi);
 }
 
-.card-wrap .bildirim {
+/* "Bulunmamaktadır" yazısı için stil */
+.bildirim {
     text-align: center;
-    width: 90%;
-    height: 80%;
-    border: 2px dashed var(--renk-kart-cizgi);
-    margin-bottom: 5em;
+    padding: 2rem 0;
 }
 
+.bildirim h3 {
+    color: var(--renk-metin-ikincil);
+}
 
+/* --- Buton Stilleri (Madde 6) --- */
+.btn-warning {
+    background: var(--renk-vurgu);
+    color: var(--renk-metin-ana);
+    border: none;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 1.5rem;
+}
 
-@media (max-width:1100px) {
+.btn-warning:hover {
+    background: var(--renk-vurgu-hover);
+}
+
+.btn-danger {
+    background: var(--renk-hata);
+    color: var(--renk-metin-ana);
+    border: none;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-danger:hover {
+    background: #e63946;
+}
+
+/* --- Doldurulmuş Kart İçerikleri --- */
+/* Yarışmalarım Listesi */
+.competition-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.competition-item-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--renk-kart-cizgi);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.competition-item-card img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: #fff;
+    padding: 5px;
+}
+
+.competition-item-card .info {
+    flex-grow: 1;
+}
+
+.competition-item-card .info h4 {
+    font-size: 1.1rem;
+    color: var(--renk-metin-ana);
+    margin: 0;
+}
+
+.competition-item-card .info p {
+    font-size: 0.9rem;
+    color: var(--renk-metin-ikincil);
+    margin-top: 0.25rem;
+}
+
+.competition-item-card .status {
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+.status-approved {
+    background: rgba(61, 220, 151, 0.1);
+    color: #3DDC97;
+}
+
+.status-pending {
+    background: rgba(244, 140, 6, 0.1);
+    color: var(--renk-vurgu);
+}
+
+.btn-detail-small {
+    background: var(--renk-kart-cizgi);
+    color: var(--renk-metin-ana);
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Bildirimler Listesi */
+.notification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.notification-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.notification-item.unread {
+    background: rgba(0, 78, 146, 0.2);
+    border: 1px solid var(--renk-kart-cizgi);
+}
+
+.notification-item .icon {
+    font-size: 1.5rem;
+    padding-top: 0.25rem;
+}
+
+.icon-success {
+    color: #3DDC97;
+}
+
+.icon-info {
+    color: #00aaff;
+}
+
+.icon-warning {
+    color: var(--renk-vurgu);
+}
+
+.notification-item .text p {
+    margin: 0;
+    line-height: 1.5;
+    color: var(--renk-metin-ana);
+}
+
+.notification-item .text span {
+    font-size: 0.8rem;
+    color: var(--renk-metin-ikincil);
+}
+
+/* Takım Listesi */
+.team-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.team-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    margin-bottom: 0.5rem;
+}
+
+.role-captain {
+    color: var(--renk-vurgu);
+    font-weight: 600;
+}
+
+.role-member {
+    color: var(--renk-metin-ikincil);
+}
+
+.btn-create-team {
+    background: var(--renk-vurgu);
+    color: var(--renk-metin-ana);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+}
+
+.btn-create-team:hover {
+    background: var(--renk-vurgu-hover);
+}
+
+/* --- Responsive Ayarlar --- */
+@media (max-width: 900px) {
     .card {
-        width: 70%;
         flex-direction: column;
     }
 
-    .info {
-        grid-template-columns: 200px 200px;
-    }
-
     .profile {
-        width: 50%;
-        height: fit-content;
-        margin: 0.5em 0;
-    }
-    .card-wrap{
-        width: 60%;
+        max-width: 100%;
     }
 }
 
-@media (max-width:750px){
-    .info{
-        grid-template-columns: 100px 100px;
-    }
-    .profile{
-        width: 90%;
-    }
-    .card-wrap{
-        width: 80%;
+@media (max-width: 600px) {
+    .info {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "box-0"
+            "box-1"
+            "box-2"
+            "box-3"
+            "box-4"
+            "box-5"
+            "box-6"
+            "box-7";
     }
 }

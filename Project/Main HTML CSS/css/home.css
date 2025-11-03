@@ -73,7 +73,7 @@
     font-weight: 600;
 }
 
-.text a:hover{
+.text a:hover {
     transition: .4s ease;
     box-shadow: 0 0 50px rgb(100, 255, 235, .2);
     background-color: var(--renk-vurgu);
@@ -103,6 +103,7 @@
 }
 
 .content h2 {
+    text-align: center;
     padding-bottom: 2em;
     -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
@@ -294,8 +295,8 @@ h4 {
 
 .hero h2 {
     text-align: center;
-    margin-bottom: 1em ;
-    padding-bottom: 1em ;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
     border-bottom: 2px solid var(--renk-kart-cizgi);
 }
 
@@ -343,6 +344,36 @@ h4 {
         width: 80%;
         height: auto;
     }
+
+    .faq-list .ans p {
+        font-size: 1rem;
+    }
+
+    /*Animasyon Kapatma*/
+    .wrap .video {
+        -webkit-animation: none !important;
+        animation: none !important;
+        opacity: 1 !important;
+    }
+
+    .wrap .faq {
+        -webkit-animation: none !important;
+        animation: none !important;
+        opacity: 1 !important;
+    }
+
+    .swiper {
+        animation: none !important;
+        -webkit-animation: none !important;
+        opacity: 1 !important;
+    }
+
+    .hero .faq {
+        opacity: 1 !important;
+        -webkit-animation: none !important;
+        animation: none !important;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -362,24 +393,25 @@ h4 {
     }
 
     .tekno-img::before {
-        width: 190px;
-        height: 190px;
+        width: 195px;
+        height: 195px;
+    }
+
+    .faq-list .ques {
+        font-size: 1.1rem;
     }
 
     /*Animasyon Kapatma*/
-    .swiper {
-        animation: none !important;
-        -webkit-animation: none !important;
-        opacity: 1 !important;
-        transform: translateX(0) !important;
-        -webkit-transform: translateX(0) !important;
-    }
 
     .content h2 {
         animation: none !important;
         -webkit-animation: none !important;
         opacity: 1 !important;
-        transform: translateX(0) !important;
-        -webkit-transform: translateX(0) !important;
+    }
+
+    .main-container .text {
+        -webkit-animation: none !important;
+        animation: none !important;
+        opacity: 1 !important;
     }
 }

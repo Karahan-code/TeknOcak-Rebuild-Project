@@ -5,7 +5,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destek</title>
+    <!--favicon links-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/Project/assets/images/main/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Project/assets/images/main/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Project/assets/images/main/favicon/favicon-96x96.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#f48c06">
+    <meta name="msapplication-TileColor" content="#f48c06">
+    <meta name="theme-color" content="#004e92">
+    <!--favicon links end-->
+    <title>TeknOcak - Giriş</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/login.css">
     <script src="/Project/js/ui.js" defer></script>
@@ -13,6 +22,8 @@
 </head>
 
 <body>
+    <div class="preloader"><img src="/Project/assets/images/main/icons8-rocket.gif" alt="Yükleniyor..."></div>
+    <div class="menu-overlay" aria-current="page"></div>
     <nav class="navbar">
         <div class="navbar-container">
             <a href="home.html" class="navbar-logo">TeknOcak</a>
@@ -55,7 +66,7 @@
                 <div class="input-box">
                     <input type="password" required id="password">
                     <span>şifre</span>
-                    <i class="fa-solid fa-eye" id="Shower"></i>
+                    <i class="fa-solid fa-eye toggle-password-btn"></i>
                 </div>
                 <div class="container">
                     <a href="#">Şifreni mi unuttun?</a>

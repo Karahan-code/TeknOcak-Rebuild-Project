@@ -6,11 +6,26 @@
 // 1. Navbar (Global)
 const navbarToggle = document.querySelector('.navbar-toggle');
 const navbarMenu = document.querySelector('.navbar-menu');
+const menuOverlay = document.querySelector('.menu-overlay');
 
-navbarToggle.addEventListener('click', () => {
-    navbarToggle.classList.toggle('active');
-    navbarMenu.classList.toggle('active');
-});
+
+// Navbar açma/kapama butonu
+if (navbarToggle) {
+    navbarToggle.addEventListener('click', () => {
+        navbarToggle.classList.toggle('active');
+        navbarMenu.classList.toggle('active');
+        menuOverlay.classList.toggle('active');
+    });
+}
+
+// Overlay'e tıklayarak kapatma
+if (menuOverlay) {
+    menuOverlay.addEventListener('click', () => {
+        navbarToggle.classList.remove('active');
+        navbarMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+    });
+}
 
 // 2. Navbar Kullanıcı Dropdown (Global)
 const dropdownToggle = document.getElementById('userbtn');
@@ -58,13 +73,20 @@ if (swiperElement) {
 }
 
 
-// 4. Faq List Animasyonu (Sayfaya Özel)
+// 4. Faq List Animasyonu (Sayfaya Özel - Akordiyon)
 const faqs = document.querySelectorAll('.faq-list');
 if (faqs.length > 0) {
+    
     faqs.forEach(faq => {
         const ques = faq.querySelector('.ques');
         if (ques) {
             ques.addEventListener('click', () => {
+                
+                faqs.forEach(otherFaq => {
+                    if (otherFaq !== faq) {
+                        otherFaq.classList.remove('active-faq');
+                    }
+                });
                 faq.classList.toggle('active-faq');
             });
         }
@@ -102,3 +124,45 @@ function initDetailPageScrollspy() {
     });
 }
 initDetailPageScrollspy();
+
+// 7. Yükleme Ekranı (Preloader) Gizleme
+function initPreloader() {
+    const preloader = document.querySelector('.preloader');
+    if (preloader) {
+        window.onload = () => {
+            preloader.classList.add('preloader-hidden');
+            setTimeout(() => {
+                if (preloader.parentNode) { // Ekstra güvenlik
+                    preloader.parentNode.removeChild(preloader);
+                }
+            }, 750);
+        };
+    }
+}
+initPreloader();
+
+// 8.ŞİFRE GÖRÜNTÜLEME (Login,Register)
+function initPasswordToggle() {
+    const passwordToggles = document.querySelectorAll('.toggle-password-btn');
+    
+    if (passwordToggles.length === 0) {
+        return;
+    }
+
+    passwordToggles.forEach(toggle => {
+        toggle.addEventListener('click', function() {
+            
+            const parentBox = this.parentElement;
+            const targetInput = parentBox.querySelector('input');
+            
+            if (targetInput) {
+                const type = targetInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                targetInput.setAttribute('type', type);
+                
+                this.classList.toggle('fa-eye-slash');
+                this.classList.toggle('fa-eye');
+            }
+        });
+    });
+}
+initPasswordToggle();
