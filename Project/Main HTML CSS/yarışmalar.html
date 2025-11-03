@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destek</title>
+    <link rel="stylesheet" href="css/yarışmalar.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="/Project/js/ui.js" defer></script>
+    <script src="/Project/js/api.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="home.html" class="navbar-logo">TeknOcak</a>
+            <button class="navbar-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="notice.html"><i class="fa-solid fa-bell"></i> Duyurular</a></li>
+                <li><a href="yarışmalar.html"><i class="fa-solid fa-flag-checkered"></i> Yarışmalar</a></li>
+                <li><a href="contact.html"><i class="fa-solid fa-phone"></i> Destek</a></li>
+                <!-- Giriş öncesi -->
+                <li class="auth"><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Giriş Yap</a></li>
+                <li class="auth"><a href="register.html"><i class="fa-solid fa-user-plus"></i> Kayıt Ol</a></li>
+                <!-- Giriş sonrası (dropdown menü) -->
+                <li class="user-item dropdown" id="dropdown">
+                    <button class="dropdown-toggle" id="userbtn"><i class="fa-solid fa-user"></i>Kullanıcı</button>
+                    <ul class="dropdown-menu" id="dropdownMenu">
+                        <li><a href="profile.html"><i class="fa-regular fa-user"></i>Profilim</a></li>
+                        <li><a href="profile.html"><i class="fa-regular fa-bell"></i>Bildirimlerim</a></li>
+                        <li><a href="profile.html"><i class="fa-solid fa-users fa-beat"></i>Takımlarım</a></li>
+                        <li><a href="profile.html"><i class="fa-regular fa-flag"></i>Yarışmalarım</a></li>
+                        <li><a href="profile.html"><i class="fa-regular fa-file"></i>Başvurularım</a></li>
+                        <li><a href="#" id="logOut"><i class="fa-solid fa-xmark"></i>Çıkış Yap</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="competitions-page">
+        <div class="competitions-container">
+            <h1 class="page-title">Yarışmalar</h1>
+            <div class="competitions-grid">
+                <div class="competition-card">
+                    <div class="card-image">
+                        <img src="/Project/assets/images/yarışmalar/giyilebilir.png"
+                            alt="Giyilebilir Teknoloji Yarışması">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Giyilebilir Teknoloji Kategorisi Yarışması</h3>
+                        <p class="card-description">Bu yarışmanın ana vizyonu, teknolojik vizyon sahibi lise
+                            öğrencilerimizin tasarladıkları otonom araçların...</p>
+                        <ul class="card-info">
+                            <li><i class="fa-solid fa-calendar-days"></i> Başlangıç: 24.11.2025</li>
+                            <li><i class="fa-solid fa-calendar-times"></i> Bitiş: 24.11.2025</li>
+                        </ul>
+                        <a href="yarışmabilgi.html" class="btn-detail">Detayları Gör</a>
+                    </div>
+                </div>
+                <div class="competition-card">
+                    <div class="card-image">
+                        <img src="/Project/assets/images/yarışmalar/deniz.png" alt="Deniz Lojistiği Yarışması">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Deniz Lojistiği ve Güvenliği Proje Yarışması</h3>
+                        <p class="card-description">Yarışmanın amacı, deniz lojistiği sektöründe verimliliği artırmak ve
+                            güvenliği en üst düzeye çıkarmak...</p>
+                        <ul class="card-info">
+                            <li><i class="fa-solid fa-calendar-days"></i> Başlangıç: 01.11.2026</li>
+                            <li><i class="fa-solid fa-calendar-times"></i> Bitiş: 01.11.2026</li>
+                        </ul>
+                        <a href="yarışmabilgi.html" class="btn-detail">Detayları Gör</a>
+                    </div>
+                </div>
+                <div class="competition-card">
+                    <div class="card-image">
+                        <img src="/Project/assets/images/yarışmalar/deprem.png"
+                            alt="Depreme Dayanıklı Yapılar Yarışması">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Depreme Dayanıklı Yapılar</h3>
+                        <p class="card-description">Ülkemiz, aktif fay hatları üzerinde yer alan bir deprem bölgesi
+                            olduğu için yapı güvenliği ve depreme dayanıklılık...</p>
+                        <ul class="card-info">
+                            <li><i class="fa-solid fa-calendar-days"></i> Başlangıç: 01.01.2026</li>
+                            <li><i class="fa-solid fa-calendar-times"></i> Bitiş: 01.01.2026</li>
+                        </ul>
+                        <a href="yarışmabilgi.html" class="btn-detail">Detayları Gör</a>
+                    </div>
+                </div>
+                <div class="competition-card">
+                    <div class="card-image">
+                        <img src="/Project/assets/images/yarışmalar/tank.png" alt="Tank Yarışları">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Türkiye Demir Ayaklar Liselerarası Tank Yarışları</h3>
+                        <p class="card-description">Bu yarışmanın amacı, lise öğrencilerimizin robotik, mekanik ve
+                            yazılım alanlarındaki yeteneklerini sergilemelerine...</p>
+                        <ul class="card-info">
+                            <li><i class="fa-solid fa-calendar-days"></i> Başlangıç: 12.02.2026</li>
+                            <li><i class="fa-solid fa-calendar-times"></i> Bitiş: 12.02.2026</li>
+                        </ul>
+                        <a href="yarışmabilgi.html" class="btn-detail">Detayları Gör</a>
+                    </div>
+                </div>
+                <div class="competition-card">
+                    <div class="card-image">
+                        <img src="/Project/assets/images/yarışmalar/afet.png" alt="Afet Teknolojileri Yarışması">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">2026 Afet Teknolojileri Yarışması</h3>
+                        <p class="card-description">Afet Teknolojileri Yarışması'nın amacı, afet anında ve sonrasında
+                            ortaya çıkan kritik ihtiyaçlara teknolojik...</p>
+                        <ul class="card-info">
+                            <li><i class="fa-solid fa-calendar-days"></i> Başlangıç: 12.12.2026</li>
+                            <li><i class="fa-solid fa-calendar-times"></i> Bitiş: 12.12.2026</li>
+                        </ul>
+                        <a href="yarışmabilgi.html" class="btn-detail">Detayları Gör</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="contact">
+            <div class="contact-btns">
+                <a href="https://x.com/ulku_ocaklari"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/ulkuocaklariekv/"><i class="fa-brands fa-instagram"></i></a>
+                <a
+                    href="https://www.linkedin.com/company/%C3%BClk%C3%BC-ocaklar%C4%B1-e%C4%9Fitim-ve-k%C3%BClt%C3%BCr-vakf%C4%B1/"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.facebook.com/UlkuOcaklariEKV/"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+            <div class="contact-text">
+                <h5>© 2025 - TeknocakPlatform - <a href="contact.html">Destek</a></h5>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

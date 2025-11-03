@@ -1,0 +1,375 @@
+/* ===========================================
+   YARIŞMA DETAY SAYFASI (yarismadetay.css)
+   main.css dosyasındaki değişkenleri kullanır.
+   =========================================== */
+
+/* --- Sayfa Başlığı (Hero) --- */
+.detail-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 1300px;
+    margin: 2rem auto;
+    padding: 1.5rem 2rem;
+    background: var(--renk-kart-zemin);
+    backdrop-filter: var(--kart-blur);
+    border: 1px solid var(--renk-kart-cizgi);
+    border-radius: var(--radius-kart);
+    box-shadow: var(--golge-kart);
+}
+
+.detail-hero .hero-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.detail-hero .hero-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: #fff;
+    padding: 5px;
+    border: 2px solid var(--renk-kart-cizgi);
+}
+
+.detail-hero h1 {
+    font-size: 1.8rem;
+    color: var(--renk-metin-ana);
+    font-weight: 600;
+}
+
+.btn-back {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    color: var(--renk-vurgu);
+    background: transparent;
+    border: 2px solid var(--renk-vurgu);
+    transition: all 0.3s ease;
+}
+
+.btn-back i {
+    margin-right: 0.5rem;
+}
+
+.btn-back:hover {
+    background: var(--renk-vurgu);
+    color: var(--renk-metin-ana);
+}
+
+
+/* --- Ana İçerik Düzeni (Sidebar + İçerik) --- */
+.detail-wrapper {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 2rem;
+    max-width: 1300px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* --- Kenar Menü (Sidebar) --- */
+.content-sidebar {
+    position: sticky;
+    top: 80px; 
+    align-self: start;
+    background: var(--renk-kart-zemin);
+    backdrop-filter: var(--kart-blur);
+    border: 1px solid var(--renk-kart-cizgi);
+    border-radius: var(--radius-kart);
+    padding: 1rem;
+}
+
+.content-sidebar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.content-sidebar a {
+    display: block;
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    color: var(--renk-metin-ikincil);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.content-sidebar a i {
+    width: 24px;
+    margin-right: 0.75rem;
+    color: var(--renk-vurgu);
+}
+
+.content-sidebar a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--renk-metin-ana);
+}
+
+.content-sidebar a.active-link {
+    background: var(--renk-vurgu);
+    color: var(--renk-metin-ana);
+}
+.content-sidebar a.active-link i {
+    color: var(--renk-metin-ana);
+}
+
+/* --- Ana İçerik Kartları --- */
+.content-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-width: 0;
+}
+
+.detail-card {
+    background: var(--renk-kart-zemin);
+    backdrop-filter: var(--kart-blur);
+    border: 1px solid var(--renk-kart-cizgi);
+    border-radius: var(--radius-kart);
+    padding: 2rem 2.5rem;
+    box-shadow: var(--golge-kart);
+    
+    scroll-margin-top: 100px;
+}
+
+.detail-card h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--renk-metin-ana);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--renk-kart-cizgi);
+}
+
+.detail-card h2 i {
+    color: var(--renk-vurgu);
+    margin-right: 0.75rem;
+}
+
+.detail-card p,
+.detail-card li {
+    color: var(--renk-metin-ikincil);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+.detail-card ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+/* Kategori Kartları (Hakkında bölümü) */
+.category-title {
+    font-size: 1.4rem;
+    color: var(--renk-metin-ana);
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.category-item {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--renk-kart-cizgi);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.category-item h4 {
+    color: var(--renk-metin-ana);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    min-height: 2.5rem;
+}
+.category-item ul {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
+
+.btn-apply {
+    display: block;
+    text-decoration: none;
+    color: var(--renk-metin-ana);
+    text-align: center;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    background-color: var(--renk-vurgu);
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+.btn-apply:hover {
+    background-color: var(--renk-vurgu-hover);
+}
+
+
+/* Takvim & Ödül Listesi */
+.info-list {
+    list-style: none;
+    padding-left: 0;
+}
+.info-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.2rem 1rem;
+    border-bottom: 1px solid var(--renk-kart-cizgi);
+}
+.info-list li:last-child {
+    border-bottom: none;
+}
+.info-list li strong {
+    color: var(--renk-metin-ana);
+    font-weight: 600;
+}
+.info-list li span {
+    font-weight: 500;
+    color: var(--renk-metin-ana);
+}
+
+.highlight-date {
+    background: var(--renk-vurgu-hover);
+    border-radius: 10px;
+    margin-top: 0.5rem;
+}
+.highlight-date strong,
+.highlight-date span {
+    color: var(--renk-metin-ana) !important;
+}
+
+/* İndirme Butonları */
+.btn-download {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    color: var(--renk-vurgu);
+    background: transparent;
+    border: 2px solid var(--renk-vurgu);
+    transition: all 0.3s ease;
+}
+.btn-download:hover {
+    background: var(--renk-vurgu);
+    color: var(--renk-metin-ana);
+}
+.btn-download i {
+    margin-right: 0.75rem;
+}
+
+.download-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* Galeri */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.gallery-grid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid var(--renk-kart-cizgi);
+}
+
+
+/* --- RESPONSIVE AYARLAR --- */
+
+@media (max-width: 1100px) {
+    .detail-wrapper {
+        grid-template-columns: 1fr !important;
+        padding: 0;
+    }
+    .content-sidebar {
+        display: none;
+    }
+
+    .detail-card {
+        border-radius: 0;
+        margin-top: -1.5rem;
+    }
+    .content-main {
+        gap: 1.5rem;
+    }
+    
+    .detail-hero {
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 0;
+    }
+}
+
+/* Küçük Tablet (768px) */
+@media (max-width: 768px) {
+    .detail-hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
+    }
+    .detail-hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .detail-card {
+        padding: 1.5rem 1.5rem;
+    }
+
+    .detail-card h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Mobil (600px altı) */
+@media (max-width: 600px) {
+    .detail-hero .hero-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .detail-hero .hero-logo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .detail-hero h1 {
+        font-size: 1.3rem;
+    }
+    
+    .btn-back {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}

@@ -23,7 +23,7 @@
 
     Ekstralar
 
-1-Duyurular kısmı tekrardan düzenlenebilir.
+1-Duyurular kısmı tekrardan düzenlenebilir. (Yapıldı 01.11.2025)
 
 2-Navbar hover animasyon bugları düzeltilebilir.
 

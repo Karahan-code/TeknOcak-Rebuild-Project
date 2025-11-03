@@ -1,0 +1,152 @@
+/* ===========================================
+   YARIŞMALAR SAYFASI (yarismalar.css)
+   main.css dosyasındaki değişkenleri kullanır.
+   =========================================== */
+
+.competitions-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 4rem 2rem;
+}
+
+.competitions-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--renk-metin-ana);
+    text-align: center;
+    margin-bottom: 3rem;
+    border-bottom: 2px solid var(--renk-kart-cizgi);
+    padding-bottom: 1rem;
+    
+    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+/* --- YARIŞMA KARTLARI --- */
+.competitions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* Kart Tasarımı:*/
+.competition-card {
+    background: var(--renk-kart-zemin);
+    backdrop-filter: var(--kart-blur);
+    border: 1px solid var(--renk-kart-cizgi);
+    border-radius: var(--radius-kart);
+    box-shadow: var(--golge-kart);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.competition-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+}
+
+.competition-card .card-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem 1.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.05); 
+}
+
+.competition-card .card-image img {
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+    background: #fff;
+    border: 3px solid var(--renk-kart-cizgi);
+    border-radius: 50%;
+}
+
+.competition-card .card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    color: var(--renk-metin-ana);
+}
+
+.competition-card .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    min-height: 3.8rem;
+    text-align: center;
+}
+
+.competition-card .card-description {
+    font-size: 0.9rem;
+    color: var(--renk-metin-ikincil);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.competition-card .card-info {
+    list-style: none;
+    font-size: 0.85rem;
+    color: var(--renk-metin-ikincil);
+    margin-bottom: 1.5rem;
+}
+
+.competition-card .card-info li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.competition-card .card-info li i {
+    color: var(--renk-vurgu); 
+    margin-right: 0.75rem;
+    width: 16px;
+}
+
+/* Buton Stili:*/
+.btn-detail {
+    text-decoration: none;
+    color: var(--renk-metin-ana);
+    background-color: var(--renk-vurgu);
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+}
+
+.btn-detail:hover {
+    background-color: var(--renk-vurgu-hover);
+    color: #fff;
+}
+
+
+/* --- RESPONSIVE AYARLAR --- */
+
+@media (max-width: 1024px) {
+    .competition-card .card-title {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .competitions-page {
+        padding: 2rem 1rem;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+}
