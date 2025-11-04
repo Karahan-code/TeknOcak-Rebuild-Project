@@ -140,6 +140,7 @@
 }
 
 .card-content {
+    backdrop-filter: var(--kart-blur);
     display: flex;
     flex-direction: column;
     justify-content: center;

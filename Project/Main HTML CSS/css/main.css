@@ -36,7 +36,7 @@
 
     body {
         min-height: 100vh;
-        background: url(/Project/assets/images/main/star.png),
+        background: url(../../assets/images/main/star.png),
             linear-gradient(to right, var(--renk-bg-1), var(--renk-bg-2));
         background-size: auto-fit, cover;
         background-attachment: fixed;
@@ -417,7 +417,6 @@
             padding: 5px 20px;
         }
 
-        #dropdown .dropdown-toggle:hover {}
 
         #dropdown .dropdown-toggle i {
             padding-right: 15px;
